@@ -32,7 +32,6 @@ seePassword.forEach((tag) => {
 // handle validation
 
 function Validate(dataForm) {
-  var _this = this;
   function getParents(element, selector) {
     while (element.parentElement) {
       if (element.parentElement.matches(selector)) {
