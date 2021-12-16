@@ -141,7 +141,7 @@ btnLogin.onclick = (e) => {
   );
   if (checkAcc) {
     e.preventDefault();
-    window.location.assign("../home.html");
+    window.location.assign("./home.html");
   } else {
     e.preventDefault();
     console.log(false);
