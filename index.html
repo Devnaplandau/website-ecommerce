@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="../images/meme.jpg" />
+    <link rel="shortcut icon" href="./images/meme.jpg" />
     <title>A&T-Store</title>
 
     <!-- link awesome -->
@@ -17,6 +17,14 @@
   </head>
   <body>
     <div class="container">
+      <div class="load">
+        <div class="lds-ellipsis">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
       <div class="forms-container">
         <div class="signin-singup">
           <form action="" class="sign-in-form">
@@ -153,6 +161,7 @@
     <script>
       Validate(".sign-in-form, .sign-up-form");
     </script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <!-- Messenger Plugin chat Code -->
     <div id="fb-root"></div>
     <!-- Your Plugin chat code -->

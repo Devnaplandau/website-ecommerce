@@ -124,12 +124,26 @@ function Validate(dataForm) {
 }
 
 // hanlde login
+const effectLoad = document.querySelector(".load");
+const effect = document.querySelector(".lds-ellipsis");
+
 let account = [
   {
     username: "admin",
     password: "adminday",
   },
 ];
+
+function showLoading() {
+  effectLoad.style.display = "flex";
+  effect.style.display = "inline-block";
+}
+
+function hideLoading() {
+  effectLoad.style.display = "none";
+  effect.style.display = "none";
+}
+
 let btnLogin = document.querySelector("#login");
 btnLogin.onclick = (e) => {
   let user = document.querySelector("#userLogin").value;
@@ -139,10 +153,20 @@ btnLogin.onclick = (e) => {
     (value) => user === value.username && pass === value.password
   );
   if (checkAcc) {
+    showLoading();
     e.preventDefault();
-    window.location.assign("./home.html");
+    setTimeout(() => {
+      window.location.replace("./home.html");
+    }, 1500);
+    // lưu key user
+    let saveUser = localStorage.setItem("token", user);
   } else {
     e.preventDefault();
-    console.log(false);
+    swal({
+      title: "Ơ kìa, không đúng rồi !",
+      text: "Bạn có đang bỏ trống không đấy !",
+      icon: "error",
+      button: "Tiếp Tục",
+    });
   }
 };
