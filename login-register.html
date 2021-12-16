@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../images/meme.jpg" />
+    <title>Ecommerce#register</title>
+
+    <!-- link awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <!-- css file -->
+    <link rel="stylesheet" href="style/login-register.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="forms-container">
+        <div class="signin-singup">
+          <form action="" class="sign-in-form">
+            <h2 class="title">Sign <span>in</span></h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input
+                id="userLogin"
+                type="text"
+                name="username"
+                rules="required"
+                placeholder="Username"
+              />
+              <div class="form-message"></div>
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input
+                id="passwordLogin"
+                type="password"
+                name="password"
+                placeholder="Password"
+                rules="required|min:6"
+              />
+              <i class="fas fa-eye look see"></i>
+              <div class="form-message"></div>
+            </div>
+
+            <input id="login" type="submit" value="Login" class="btn solid" />
+
+            <p class="social-text">Or sign in with social planforms</p>
+            <div class="social-media">
+              <a href="#" class="social-icon">
+                <i class="fab fa-facebook"></i>
+              </a>
+              <a href="#" class="social-icon"> <i class="fab fa-github"></i></a>
+              <a href="#" class="social-icon"> <i class="fab fa-google"></i></a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </form>
+
+          <form action="" class="sign-up-form">
+            <h2 class="title">Sign <span> up</span></h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input
+                id="userRegister"
+                type="text"
+                name="username"
+                placeholder="Username"
+                rules="required"
+                disabled
+              />
+              <div class="form-message"></div>
+            </div>
+            <div class="input-field">
+              <i class="fas fa-envelope"></i>
+              <input
+                id="emailRegister"
+                type="text"
+                name="email"
+                placeholder="Email"
+                rules="required|email"
+              />
+              <div class="form-message"></div>
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input
+                id="passwordRegister"
+                type="password"
+                name="password"
+                placeholder="Password"
+                rules="required|min:6"
+                disabled
+              />
+              <i class="fas fa-eye look see"></i>
+              <div class="form-message"></div>
+            </div>
+
+            <input
+              id="logup"
+              type="submit"
+              value="Sign Up"
+              class="btn solid"
+              disabled
+            />
+
+            <p class="social-text">Or sign up with social planforms</p>
+            <div class="social-media">
+              <a href="#" class="social-icon">
+                <i class="fab fa-facebook"></i>
+              </a>
+              <a href="#" class="social-icon"> <i class="fab fa-github"></i></a>
+              <a href="#" class="social-icon"> <i class="fab fa-google"></i></a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="panels-container">
+        <div class="panel left-panel">
+          <div class="content">
+            <h3>New here ?</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, quas
+              earum, obcaecati.
+            </p>
+            <button class="btn trasparent" id="sign-up-btn">Sign Up</button>
+          </div>
+          <img src="images/meow.svg" class="image" alt="" />
+        </div>
+
+        <div class="panel right-panel">
+          <div class="content">
+            <h3>One of us ?</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, quas
+              earum
+            </p>
+            <button class="btn trasparent" id="sign-in-btn">Sign In</button>
+          </div>
+          <img src="images/meow.svg" class="image" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <!-- js file -->
+    <script src="app/form.js"></script>
+    <script>
+      Validate(".sign-in-form, .sign-up-form");
+    </script>
+  </body>
+</html>

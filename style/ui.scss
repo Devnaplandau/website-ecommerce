@@ -11,16 +11,20 @@
   text-transform: capitalize;
   transition: all 0.2s linear;
 }
-
+$hover-cl: linear-gradient(#f64f59, #c471ed, #12c2e9);
 $blue: #0984e3;
-$github-color: #34236a;
+$github-color: linear-gradient(#12c2e9, #c471ed, #f64f59);
+// $github-color: #ebbdde;
+$github-color-bold: #eb85cefa;
+// $github-color-bold: linear-gradient(#fc5c7d, #6a82fb);
 $black: #333;
 $white: #fff;
 $gold: gold;
 $light-color: #666;
 $light-bg: #eee;
-$border: 0.2rem solid $black;
+$border: 0.2rem solid rgba(0, 0, 0, 0.479);
 $box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+$box-shadow-cl: 0 0.5rem 1rem rgba(81, 133, 192, 0.2);
 
 @mixin grid($value) {
   display: grid;
@@ -29,16 +33,59 @@ $box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 html {
   font-size: 62.5%;
-  overflow: hidden;
+  overflow-x: hidden;
 
   &::-webkit-scrollbar {
-    width: 1rem;
+    width: 0.5rem;
   }
   &::-webkit-scrollbar-track {
     background: $light-bg;
+    border-radius: 10px;
   }
   &::-webkit-scrollbar-thumb {
     background: $github-color;
+    border-radius: 10px;
+  }
+}
+body {
+  background: $light-bg;
+}
+
+section {
+  padding: 3rem 9%;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 3.5rem;
+  color: $black;
+
+  span {
+    color: $github-color-bold;
+  }
+}
+
+.btn {
+  margin-top: 1rem;
+  display: inline-block;
+  border-radius: 0.5rem;
+  padding: 1.5rem 6rem;
+  font-size: 1.7rem;
+  color: $white;
+  cursor: pointer;
+  background: $github-color;
+  &:hover {
+    // animation: rotate 0.5s linear;
+    transform: rotate(360deg);
+    background: $github-color-bold;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
   }
 }
 
@@ -48,7 +95,7 @@ html {
   left: 0;
   right: 0;
   z-index: 1000;
-  background: $github-color;
+  background: $github-color-bold;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -60,6 +107,7 @@ html {
     font-weight: bolder;
 
     i {
+      padding-right: 1rem;
       color: $white;
     }
   }
@@ -79,6 +127,7 @@ html {
       font-size: 1.7rem;
       text-transform: none;
       color: $light-color;
+      outline: none;
     }
 
     label {
@@ -90,5 +139,846 @@ html {
         color: $github-color;
       }
     }
+  }
+  .icons a,
+  .icons div {
+    font-size: 2.5rem;
+    margin-left: 2rem;
+    color: $white;
+    cursor: pointer;
+    &:hover {
+      color: $light-color;
+    }
+  }
+}
+//     end
+#search-btn {
+  display: none;
+}
+
+.side-bar {
+  position: fixed;
+  top: 0;
+  left: -110%;
+  height: 100%;
+  width: 30rem;
+  background: $white;
+  z-index: 10000;
+
+  &.active {
+    // position: fixed;
+    left: 0;
+    transition: all 0.2s linear;
+    // box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.7);
+  }
+  .overlay {
+    position: fixed;
+    margin-left: 30rem;
+    width: calc(100% - 30rem);
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 10;
+  }
+  #close-side-bar {
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    font-size: 4rem;
+    cursor: pointer;
+    color: $light-color;
+
+    &:hover {
+      transform: rotate(90deg);
+      color: $black;
+    }
+  }
+  .user {
+    padding: 2rem;
+    background: $light-bg;
+    text-align: center;
+
+    img {
+      height: 17rem;
+      width: 17rem;
+      border-radius: 50%;
+      border: 1rem solid $github-color;
+      box-shadow: $box-shadow;
+      margin-bottom: 0.5rem;
+    }
+    h3 {
+      padding: 0.5rem 0;
+      font-size: 1.7rem;
+      color: $light-color;
+    }
+    a {
+      font-size: 1.5rem;
+      color: $blue;
+
+      &:hover {
+        color: $black;
+      }
+    }
+  }
+
+  .navbar {
+    padding: 1rem 2rem;
+
+    a {
+      display: block;
+      padding: 1rem 2rem;
+      font-size: 1.7rem;
+      color: $light-color;
+      font-weight: bolder;
+
+      &:hover {
+        color: $blue;
+        i {
+          padding-right: 3rem;
+          transform: rotate(40deg);
+        }
+      }
+    }
+    i {
+      padding-right: 1rem;
+    }
+  }
+}
+
+.about {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+
+  .image {
+    flex: 1 1 42rem;
+
+    img {
+      width: 100%;
+      border-radius: 5rem;
+    }
+  }
+
+  .content {
+    flex: 1 1 42rem;
+    padding: 3rem;
+    background: $white;
+    border-radius: 5rem;
+
+    h3 {
+      font-size: 3rem;
+      text-transform: uppercase;
+      color: $black;
+    }
+    p {
+      font-size: 1.5rem;
+      color: $light-color;
+      padding: 1rem 0;
+      line-height: 2;
+    }
+  }
+}
+
+.faq {
+  .accordion-container {
+    max-width: 70rem;
+    margin: 0 auto;
+
+    .accordion {
+      background: $white;
+      margin-bottom: 2rem;
+      box-shadow: $box-shadow;
+
+      &:last-child {
+        margin-bottom: 0.5rem;
+      }
+      &.active {
+        .accordion-heading {
+          background: $github-color;
+          i {
+            transform: rotate(90deg);
+          }
+        }
+        .acconrdion-content {
+          display: block;
+        }
+      }
+      .accordion-heading {
+        padding: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        justify-content: space-between;
+        background-color: $black;
+        cursor: pointer;
+
+        h3 {
+          font-size: 2rem;
+          color: $white;
+        }
+        i {
+          font-size: 2rem;
+          color: $white;
+        }
+      }
+
+      .acconrdion-content {
+        padding: 2rem;
+        font-size: 1.5rem;
+        line-height: 2;
+        color: $light-color;
+        display: none;
+        animation: fadeIn 0.2s linear;
+      }
+    }
+  }
+}
+
+.review {
+  .slide {
+    width: 35rem;
+    padding: 2rem;
+    text-align: center;
+    border: $border;
+    box-shadow: $box-shadow;
+    border-radius: 0.5rem;
+    background: $white;
+
+    img {
+      height: 10rem;
+      width: 10rem;
+      border-radius: 50%;
+    }
+
+    h3 {
+      font-size: 2rem;
+      padding: 0.5rem 0;
+      color: $black;
+    }
+    span {
+      color: $github-color-bold;
+      font-size: 1.7rem;
+    }
+    p {
+      font-size: 1.5rem;
+      line-height: 2;
+      color: $light-color;
+    }
+  }
+}
+
+.quick-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  background: $github-color-bold;
+  justify-content: space-between;
+  .logo {
+    font-size: 2.5rem;
+    color: $white;
+    font-weight: bolder;
+
+    i {
+      padding-right: 1rem;
+      color: $white;
+    }
+  }
+  .links {
+    a {
+      margin: 0 1rem;
+      font-size: 1.7rem;
+      color: $white;
+
+      &:hover {
+        color: $light-color;
+      }
+    }
+  }
+  .share {
+    a {
+      font-size: 2.5rem;
+      color: $white;
+      margin-left: 2rem;
+
+      &:hover {
+        color: $light-color;
+      }
+    }
+  }
+}
+
+.credit {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  background: $white;
+  justify-content: center;
+
+  p {
+    font-size: 2rem;
+    color: $light-color;
+    span {
+      color: $blue;
+    }
+  }
+  img {
+    height: 4rem;
+    filter: drop-shadow(0 0 0.1rem $black);
+  }
+}
+
+.home {
+  background: $white;
+
+  .slide {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    cursor: pointer;
+    min-height: 40rem;
+    padding: 2rem 0;
+    .image {
+      flex: 1 1 42rem;
+      text-align: center;
+
+      img {
+        height: 30rem;
+      }
+    }
+
+    .content {
+      flex: 1 1 42rem;
+      span {
+        font-size: 2rem;
+        color: $blue;
+      }
+      h3 {
+        padding-top: 0.5rem;
+        color: $black;
+        font-size: 3rem;
+      }
+    }
+  }
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 3rem;
+  color: $black;
+}
+
+.banner {
+  .box-container {
+    @include grid(31rem);
+
+    .box {
+      position: relative;
+      height: 25rem;
+      border: $border;
+      border-radius: 0.5rem;
+      overflow: hidden;
+      box-shadow: $box-shadow;
+
+      &:hover img {
+        transform: scale(1.1);
+      }
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+      .content {
+        position: absolute;
+        top: 50%;
+        left: 5%;
+        transform: translateY(-50%) rotate(45deg);
+
+        span {
+          font-size: 1.7rem;
+          color: $blue;
+        }
+        h3 {
+          font-size: 2rem;
+          padding: 0.5rem 0;
+          color: $black;
+        }
+      }
+    }
+  }
+}
+
+.arrivals {
+  .box-container {
+    @include grid(34rem);
+
+    .box {
+      border-radius: 0.5rem;
+      border: $border;
+      padding: 2rem;
+      box-shadow: $box-shadow;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      background: $white;
+
+      &:hover {
+        .image {
+          .main-img {
+            display: none;
+            animation: fadeIn 0.2s linear;
+          }
+          .hover-img {
+            display: block;
+          }
+        }
+      }
+
+      .image {
+        img {
+          height: 15rem;
+        }
+        .hover-img {
+          display: none;
+        }
+      }
+      .content {
+        h3 {
+          font-size: 2rem;
+          color: $black;
+        }
+        .price {
+          padding: 0.5rem 0;
+          font-size: 2rem;
+          color: $blue;
+
+          span {
+            font-size: 1.5rem;
+            color: $light-color;
+            text-decoration: line-through;
+          }
+        }
+        .stars i {
+          font-size: 1.5rem;
+          color: $gold;
+        }
+      }
+    }
+  }
+}
+
+.category {
+  .box-container {
+    @include grid(15rem);
+
+    .box {
+      text-align: center;
+      border-radius: 0.5rem;
+      border: $border;
+      padding: 2rem;
+      background: $white;
+      box-shadow: $box-shadow;
+      &:hover {
+        background: $black;
+        h3 {
+          color: $white;
+        }
+      }
+      img {
+        height: 8rem;
+        margin-bottom: 0.5rem;
+      }
+
+      h3 {
+        font-size: 1.7rem;
+        color: $black;
+      }
+    }
+  }
+}
+
+.products {
+  .box-container {
+    @include grid(31rem);
+
+    .box {
+      border: $border;
+      text-align: center;
+      background: $white;
+      box-shadow: $box-shadow;
+      border-radius: 0.5rem;
+      overflow: hidden;
+      &:hover .image {
+        .hover-img {
+          display: inline-block;
+        }
+        .main-img {
+          display: none;
+        }
+        .icons {
+          left: 2rem;
+        }
+      }
+      .image {
+        position: relative;
+        img {
+          height: 25rem;
+          animation: fadeIn 0.2s linear;
+        }
+        .hover-img {
+          display: none;
+        }
+        .icons {
+          position: absolute;
+          top: 0rem;
+          left: -7rem;
+
+          a {
+            display: block;
+            margin-top: 1rem;
+            height: 4.5rem;
+            width: 4.5rem;
+            line-height: 4.5rem;
+            font-size: 1.5rem;
+            border-radius: 50%;
+            color: $white;
+            background: $black;
+
+            &:hover {
+              background: $github-color;
+            }
+          }
+        }
+      }
+      .content {
+        background: $light-bg;
+        padding: 2rem;
+        h3 {
+          font-size: 2rem;
+          color: $black;
+        }
+
+        .price {
+          font-size: 2.2rem;
+          color: $github-color;
+
+          span {
+            color: $light-color;
+            font-size: 1.5rem;
+            text-decoration: line-through;
+          }
+        }
+        .stars {
+          i {
+            font-size: 1.7rem;
+            color: $gold;
+          }
+        }
+      }
+    }
+  }
+}
+
+.product-banner {
+  .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    .box {
+      flex: 1 1 42rem;
+      position: relative;
+      box-shadow: $box-shadow;
+      border-radius: 0.5rem;
+      border: $border;
+      overflow: hidden;
+      height: 30rem;
+      &:hover img {
+        transform: scale(1.1);
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .content {
+        position: absolute;
+        top: 50%;
+        left: 5%;
+        transform: translateY(-50%);
+
+        span {
+          font-size: 1.7rem;
+          color: $github-color;
+        }
+        h3 {
+          padding-top: 0.5rem;
+          font-size: 2rem;
+          color: $black;
+        }
+      }
+    }
+  }
+}
+
+.info-container {
+  .box-container {
+    @include grid(31rem);
+
+    .box {
+      background: $white;
+      border-radius: 0.5rem;
+      text-align: center;
+      padding: 2rem;
+      border: $border;
+      box-shadow: $box-shadow;
+
+      i {
+        height: 7.5rem;
+        width: 7.5rem;
+        line-height: 7.5rem;
+        font-size: 2.5rem;
+        border-radius: 50%;
+        margin-bottom: 0.5rem;
+        background: $github-color;
+        color: $white;
+      }
+      h3 {
+        font-size: 2rem;
+        padding: 0.5rem 0;
+        color: $black;
+      }
+      p {
+        font-size: 1.5rem;
+        line-height: 2;
+        color: $light-color;
+        &:hover {
+          color: $blue;
+        }
+      }
+      a {
+        font-size: 1.5rem;
+        color: $light-color;
+        padding: 1rem 0;
+        line-height: 2;
+        &:hover {
+          color: $blue;
+        }
+      }
+    }
+  }
+}
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+
+  form {
+    flex: 1 1 42rem;
+
+    h3 {
+      font-size: 3rem;
+      text-transform: uppercase;
+      color: $black;
+      padding-bottom: 1rem;
+    }
+    p {
+      font-size: 1.5rem;
+      color: $light-color;
+      padding: 1rem 0;
+      line-height: 2;
+    }
+
+    .inputBox {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      input {
+        width: 49%;
+      }
+    }
+    .inputBox input,
+    textarea {
+      padding: 1.2rem 1.4rem;
+      border-radius: 0.5rem;
+      box-shadow: $box-shadow;
+      border: $border;
+      background: $white;
+      text-decoration: none;
+      color: $light-color;
+      font-size: 1.5rem;
+      margin: 0.7rem 0;
+    }
+    textarea {
+      height: 15rem;
+      resize: none;
+      width: 100%;
+    }
+  }
+  .map {
+    flex: 1 1 42rem;
+    width: 100%;
+  }
+}
+
+.newsletter {
+  background: $github-color-bold;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+
+  .content {
+    flex: 1 1 42rem;
+
+    h3 {
+      font-size: 6rem;
+      color: $white;
+      text-transform: uppercase;
+    }
+    p {
+      font-size: 2rem;
+      color: $white;
+    }
+  }
+  form {
+    flex: 1 1 42rem;
+    background: $white;
+    display: flex;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    align-items: center;
+    height: 6rem;
+
+    .email {
+      width: 100%;
+      padding: 0 1.4rem;
+      text-transform: none;
+      color: $light-color;
+      font-size: 1.6rem;
+    }
+    .btn {
+      margin-top: 0;
+    }
+  }
+}
+
+// Responsive
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 55%;
+  }
+  .header {
+    padding: 2rem;
+  }
+  section {
+    padding: 3rem 2rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .quick-links {
+    flex-flow: column;
+
+    .links {
+      padding: 1rem 0;
+
+      a {
+        display: block;
+        font-size: 2rem;
+        text-align: center;
+        padding: 1rem 0;
+      }
+    }
+    .share {
+      a {
+        margin: 0 1rem;
+      }
+    }
+  }
+  .credit {
+    flex-flow: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  #search-btn {
+    display: inline-block;
+  }
+  .header {
+    .search-form {
+      position: absolute;
+      top: 99%;
+      left: 0;
+      right: 0;
+      width: 100%;
+      border-radius: 0;
+      box-shadow: $box-shadow;
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+      &.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      }
+    }
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
+  .home {
+    .slide {
+      text-align: center;
+    }
+  }
+  .newsletter {
+    text-align: center;
+
+    .content {
+      h3 {
+        font-size: 4rem;
+        padding-bottom: 1rem;
+      }
+      p {
+        font-size: 1.7rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+  .header {
+    justify-content: center;
+    .logo {
+      display: none;
+    }
+    .icons a,
+    .icons div {
+      margin: 0 1rem;
+    }
+  }
+  .home {
+    .slide {
+      .image {
+        img {
+          height: auto;
+          width: 100%;
+        }
+      }
+    }
+  }
+  .arrivals .box-container .box {
+    flex-flow: column;
+    gap: 2;
+    text-align: center;
+  }
+  .content form .inputBox input {
+    width: 100%;
   }
 }
