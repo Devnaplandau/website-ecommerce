@@ -2,13 +2,12 @@ const get = document.querySelector.bind(document);
 const getAll = document.querySelectorAll.bind(document);
 
 let listProducts = get(".showListProducts");
-let api = "app/dataProduct.json";
 let test = getAll(".nav");
 let headingProduct = get(".heading-products");
 const pageProduct = {
   handleGetData: function () {
     let _this = this;
-    fetch(api)
+    fetch("dataProduct.json")
       .then((response) => {
         return response.json();
       })
