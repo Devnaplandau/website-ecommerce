@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="../images/meme.jpg" />
-    <title>Ecommerce#about</title>
+    <link rel="shortcut icon" href="images/iconAT.png" />
+    <title>A&T-Store - About</title>
 
     <!-- link awesome -->
     <link
@@ -18,12 +18,12 @@
       href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
     />
     <!-- css file -->
-    <link rel="stylesheet" href="../style/ui.css" />
+    <link rel="stylesheet" href="style/ui.css" />
   </head>
   <body>
     <!-- header section -->
     <header class="header">
-      <a href="#" class="logo"><i class="fas fa-store"></i>A&T-Store</a>
+      <a href="home.html" class="logo"><i class="fas fa-store"></i>A&T-Store</a>
 
       <form action="" class="search-form">
         <input type="search" id="search-box" placeholder="search here..." />
@@ -33,9 +33,12 @@
       <div class="icons">
         <div id="menu-btn" class="fas fa-bars"></div>
         <div id="search-btn" class="fas fa-search"></div>
-        <a href="login.html" class="fas fa-user"></a>
+        <a href="#" onclick="msg()" class="fas fa-user"></a>
         <!-- <a href="#" class="fas fa-heart"></a> -->
-        <a href="cart.html" class="fas fa-shopping-cart"></a>
+        <a href="cart.html" class="cart">
+          <div class="fas fa-shopping-cart"></div>
+          <span class="count"></span>
+        </a>
       </div>
     </header>
     <!-- end header -->
@@ -44,20 +47,184 @@
       <div class="overlay"></div>
       <div id="close-side-bar" class="fas fa-times"></div>
       <div class="user">
-        <img src="../images/meme.jpg" alt="" />
+        <img src="images/meme.jpg" alt="" />
         <h3>Devnaplandau</h3>
-        <a href="#">Log out</a>
+        <a href="./index.html">log out</a>
       </div>
 
       <nav class="navbar">
         <a href="home.html"><i class="fas fa-angle-right"></i>home</a>
-        <a href="about.html"><i class="fas fa-angle-right"></i>about</a>
+        <a href="cart.html"><i class="fas fa-angle-right"></i>cart</a>
         <a href="products.html"><i class="fas fa-angle-right"></i>products</a>
         <a href="contact.html"><i class="fas fa-angle-right"></i>contact</a>
-        <a href="cart.html"><i class="fas fa-angle-right"></i>cart</a>
+        <a href="about.html"><i class="fas fa-angle-right"></i>about</a>
       </nav>
     </div>
     <!-- end navbar -->
+
+    <!-- about sections -->
+
+    <section class="about">
+      <div class="image">
+        <img src="images/AT-removebg.png" alt="" />
+      </div>
+
+      <div class="content">
+        <h3>our story</h3>
+        <p>
+          This is a website that is one of the products, that I make based on
+          the available interface to practice and improve my knowledge of
+          website programming.
+        </p>
+        <p>I'm happy if it can help you, thank you for using it.</p>
+        <a href="#ourStory" class="btn">read more</a>
+      </div>
+    </section>
+    <!-- end about -->
+    <!-- reviews starts -->
+    <section class="review">
+      <h1 class="heading">clients <span>review</span></h1>
+
+      <div class="swiper review-slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide slide">
+            <img src="images/meme.jpg" alt="" />
+            <h3>anonymous customer</h3>
+            <span>member silver</span>
+            <p>
+              This is just a comment just to let everyone know there are
+              comments here. hehe
+            </p>
+          </div>
+
+          <div class="swiper-slide slide">
+            <img src="images/meme.jpg" alt="" />
+            <h3>anonymous customer</h3>
+            <span>silver member</span>
+            <p>
+              This is just a comment just to let everyone know there are
+              comments here. hehe
+            </p>
+          </div>
+
+          <div class="swiper-slide slide">
+            <img src="images/meme.jpg" alt="" />
+            <h3>anonymous customer</h3>
+            <span>member</span>
+            <p>
+              This is just a comment just to let everyone know there are
+              comments here. hehe
+            </p>
+          </div>
+
+          <div class="swiper-slide slide">
+            <img src="images/meme.jpg" alt="" />
+            <h3>anonymous customer</h3>
+            <span>member</span>
+            <p>
+              This is just a comment just to let everyone know there are
+              comments here. hehe
+            </p>
+          </div>
+
+          <div class="swiper-slide slide">
+            <img src="images/meme.jpg" alt="" />
+            <h3>anonymous customer</h3>
+            <span>gold member</span>
+            <p>
+              This is just a comment just to let everyone know there are
+              comments here. hehe
+            </p>
+          </div>
+
+          <div class="swiper-slide slide">
+            <img src="images/meme.jpg" alt="" />
+            <h3>anonymous customer</h3>
+            <span>diamond member</span>
+            <p>
+              This is just a comment just to let everyone know there are
+              comments here. hehe
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end reviews -->
+    <!-- faqs câu hỏi thường gặp -->
+
+    <section class="faq">
+      <h1 id="ourStory" class="heading">question & <span>answers</span></h1>
+      <div class="accordion-container">
+        <div class="accordion">
+          <div class="accordion-heading">
+            <h3>recruitment.</h3>
+            <i class="fas fa-angle-down"></i>
+          </div>
+          <div class="acconrdion-content">
+            We will have a recruitment mode soon, thank you for your interest in
+            it.
+          </div>
+        </div>
+
+        <div class="accordion">
+          <div class="accordion-heading">
+            <h3>customer support.</h3>
+            <i class="fas fa-angle-down"></i>
+          </div>
+          <div class="acconrdion-content">
+            We have integrated chat bot in the home page, if you have any
+            questions you can use it.
+          </div>
+        </div>
+
+        <div class="accordion">
+          <div class="accordion-heading">
+            <h3>payment methods.</h3>
+            <i class="fas fa-angle-down"></i>
+          </div>
+          <div class="acconrdion-content">
+            Currently the website is only a trial version, all forms of payment
+            have not been applied yet.
+          </div>
+        </div>
+
+        <div class="accordion">
+          <div class="accordion-heading">
+            <h3>the store's branches.</h3>
+            <i class="fas fa-angle-down"></i>
+          </div>
+          <div class="acconrdion-content">
+            Currently the store's branches are still in the planning process, it
+            will launch soon in the future.
+          </div>
+        </div>
+
+        <div class="accordion">
+          <div class="accordion-heading">
+            <h3>promotions and membership registration.</h3>
+            <i class="fas fa-angle-down"></i>
+          </div>
+          <div class="acconrdion-content">
+            Currently the registration function is not active, about the
+            promotion it is planned and regularly updated at the homepage of the
+            store.
+          </div>
+        </div>
+
+        <div class="accordion">
+          <div class="accordion-heading">
+            <h3>return and refund policy.</h3>
+            <i class="fas fa-angle-down"></i>
+          </div>
+          <div class="acconrdion-content">
+            The goods will be carefully packed and shipped, during the receipt
+            of the goods, the customer can record the video to facilitate the
+            return and refund.
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end fas -->
     <!-- footer section  -->
 
     <section class="quick-links">
@@ -65,10 +232,10 @@
 
       <div class="links">
         <a href="home.html">home</a>
-        <a href="about.html">about</a>
+        <a href="cart.html">cart</a>
         <a href="products.html">products</a>
         <a href="contact.html">contact</a>
-        <a href="cart.html">cart</a>
+        <a href="about.html">about</a>
       </div>
 
       <div class="share">
@@ -87,6 +254,7 @@
     <!-- swiper js tạo hiệu ứng thanh trược -->
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <!-- js file -->
-    <script src="../app/logic.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="app/logic.js"></script>
   </body>
 </html>

@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="../images/meme.jpg" />
-    <title>Ecommerce#cart</title>
+    <link rel="shortcut icon" href="images/iconAT.png" />
+    <title>A&T-Store - Cart</title>
 
     <!-- link awesome -->
     <link
@@ -18,12 +18,12 @@
       href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
     />
     <!-- css file -->
-    <link rel="stylesheet" href="../style/ui.css" />
+    <link rel="stylesheet" href="style/ui.css" />
   </head>
   <body>
     <!-- header section -->
     <header class="header">
-      <a href="#" class="logo"><i class="fas fa-store"></i>A&T-Store</a>
+      <a href="home.html" class="logo"><i class="fas fa-store"></i>A&T-Store</a>
 
       <form action="" class="search-form">
         <input type="search" id="search-box" placeholder="search here..." />
@@ -33,9 +33,12 @@
       <div class="icons">
         <div id="menu-btn" class="fas fa-bars"></div>
         <div id="search-btn" class="fas fa-search"></div>
-        <a href="login.html" class="fas fa-user"></a>
+        <a href="#" onclick="msg()" class="fas fa-user"></a>
         <!-- <a href="#" class="fas fa-heart"></a> -->
-        <a href="cart.html" class="fas fa-shopping-cart"></a>
+        <a href="cart.html" class="cart">
+          <div class="fas fa-shopping-cart"></div>
+          <span class="count"></span>
+        </a>
       </div>
     </header>
     <!-- end header -->
@@ -44,20 +47,69 @@
       <div class="overlay"></div>
       <div id="close-side-bar" class="fas fa-times"></div>
       <div class="user">
-        <img src="../images/meme.jpg" alt="" />
+        <img src="images/meme.jpg" alt="" />
         <h3>Devnaplandau</h3>
-        <a href="#">Log out</a>
+        <a href="./index.html">log out</a>
       </div>
 
       <nav class="navbar">
         <a href="home.html"><i class="fas fa-angle-right"></i>home</a>
-        <a href="about.html"><i class="fas fa-angle-right"></i>about</a>
+        <a href="cart.html"><i class="fas fa-angle-right"></i>cart</a>
         <a href="products.html"><i class="fas fa-angle-right"></i>products</a>
         <a href="contact.html"><i class="fas fa-angle-right"></i>contact</a>
-        <a href="cart.html"><i class="fas fa-angle-right"></i>cart</a>
+        <a href="about.html"><i class="fas fa-angle-right"></i>about</a>
       </nav>
     </div>
     <!-- end navbar -->
+
+    <section class="shopping-cart">
+      <h1 class="heading">your <span>products</span></h1>
+      <div class="box-container">
+        <div class="box">
+          <i class="fas fa-times"></i>
+          <img src="images/product-1.jpg" alt="" />
+          <div class="content">
+            <h3>smartphone</h3>
+            <form action="">
+              <span>quatity: </span>
+              <input type="number" name="" id="" value="1" />
+            </form>
+            <div class="price">$249.99 <span>$999</span></div>
+          </div>
+        </div>
+
+        <div class="box">
+          <i class="fas fa-times"></i>
+          <img src="images/product-1.jpg" alt="" />
+          <div class="content">
+            <h3>smartphone</h3>
+            <form action="">
+              <span>quatity: </span>
+              <input type="number" name="" id="" value="1" />
+            </form>
+            <div class="price">$249.99 <span>#999</span></div>
+          </div>
+        </div>
+
+        <div class="box">
+          <i class="fas fa-times"></i>
+          <img src="images/product-1.jpg" alt="" />
+          <div class="content">
+            <h3>smartphone</h3>
+            <form action="">
+              <span>quatity: </span>
+              <input type="number" name="" id="" value="1" />
+            </form>
+            <div class="price">$249.99 <span>#999</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="cart-total">
+        <h3>subtotal : <span>$19999</span></h3>
+        <a href="#" class="btn">payment</a>
+      </div>
+    </section>
+
     <!-- footer section  -->
 
     <section class="quick-links">
@@ -65,10 +117,10 @@
 
       <div class="links">
         <a href="home.html">home</a>
-        <a href="about.html">about</a>
+        <a href="cart.html">cart</a>
         <a href="products.html">products</a>
         <a href="contact.html">contact</a>
-        <a href="cart.html">cart</a>
+        <a href="about.html">about</a>
       </div>
 
       <div class="share">
@@ -87,6 +139,7 @@
     <!-- swiper js tạo hiệu ứng thanh trược -->
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <!-- js file -->
-    <script src="../app/logic.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="app/logic.js"></script>
   </body>
 </html>

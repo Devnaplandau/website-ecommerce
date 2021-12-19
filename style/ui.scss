@@ -10,12 +10,17 @@
   border: none;
   text-transform: capitalize;
   transition: all 0.2s linear;
+  scroll-behavior: smooth;
+  outline-style: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 $hover-cl: linear-gradient(#f64f59, #c471ed, #12c2e9);
 $blue: #0984e3;
-$github-color: linear-gradient(#12c2e9, #c471ed, #f64f59);
+$github-color: linear-gradient(#fad0c4, #e3528f);
 // $github-color: #ebbdde;
-$github-color-bold: #eb85cefa;
+$github-color-bold: #ef647e;
+$heading: #ef647e;
 // $github-color-bold: linear-gradient(#fc5c7d, #6a82fb);
 $black: #333;
 $white: #fff;
@@ -62,23 +67,25 @@ section {
   color: $black;
 
   span {
-    color: $github-color-bold;
+    text-decoration: underline;
+    color: $heading;
   }
 }
 
 .btn {
   margin-top: 1rem;
   display: inline-block;
-  border-radius: 0.5rem;
+  border-radius: 3.5rem;
   padding: 1.5rem 6rem;
   font-size: 1.7rem;
   color: $white;
   cursor: pointer;
   background: $github-color;
   &:hover {
-    // animation: rotate 0.5s linear;
-    transform: rotate(360deg);
-    background: $github-color-bold;
+    font-weight: 700;
+    font-size: 1.8rem;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.185);
+    background: linear-gradient(#e3528f, #f5c2b4);
   }
 }
 
@@ -150,6 +157,24 @@ section {
       color: $light-color;
     }
   }
+  .icons {
+    .cart {
+      left: -2.2rem;
+      position: relative;
+      .count {
+        font-size: 1.8rem;
+        width: 3rem;
+        // padding: 0.2rem;
+        bottom: 1.8rem;
+        left: 3.4rem;
+        position: absolute;
+        z-index: 10;
+        background: #684d4d;
+        border-radius: 50%;
+        text-align: center;
+      }
+    }
+  }
 }
 //     end
 #search-btn {
@@ -189,7 +214,7 @@ section {
 
     &:hover {
       transform: rotate(90deg);
-      color: $black;
+      color: #ef647e;
     }
   }
   .user {
@@ -204,6 +229,7 @@ section {
       border: 1rem solid $github-color;
       box-shadow: $box-shadow;
       margin-bottom: 0.5rem;
+      cursor: pointer;
     }
     h3 {
       padding: 0.5rem 0;
@@ -211,10 +237,13 @@ section {
       color: $light-color;
     }
     a {
-      font-size: 1.5rem;
-      color: $blue;
+      padding: 1rem 0;
+      font-weight: 600;
+      font-size: 1.8rem;
+      color: #eb9fad;
 
       &:hover {
+        letter-spacing: 1px;
         color: $black;
       }
     }
@@ -231,7 +260,7 @@ section {
       font-weight: bolder;
 
       &:hover {
-        color: $blue;
+        color: $github-color-bold;
         i {
           padding-right: 3rem;
           transform: rotate(40deg);
@@ -271,9 +300,10 @@ section {
       color: $black;
     }
     p {
+      text-transform: none;
       font-size: 1.5rem;
       color: $light-color;
-      padding: 1rem 0;
+      padding: 0.5rem 0;
       line-height: 2;
     }
   }
@@ -294,7 +324,7 @@ section {
       }
       &.active {
         .accordion-heading {
-          background: $github-color;
+          background: linear-gradient(#f7b2f7, #f5c2b4);
           i {
             transform: rotate(90deg);
           }
@@ -309,9 +339,8 @@ section {
         align-items: center;
         gap: 1rem;
         justify-content: space-between;
-        background-color: $black;
+        background-color: rgba(0, 0, 0, 0.479);
         cursor: pointer;
-
         h3 {
           font-size: 2rem;
           color: $white;
@@ -367,11 +396,97 @@ section {
   }
 }
 
+.shopping-cart {
+  .box-container {
+    @include grid(31rem);
+
+    .box {
+      position: relative;
+      padding: 2rem;
+      border: $border;
+      border-radius: 0.5rem;
+      box-shadow: $box-shadow;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: $white;
+      .fa-times {
+        position: absolute;
+        top: 1rem;
+        right: 1.5rem;
+        font-size: 2.5rem;
+        color: $light-color;
+        cursor: pointer;
+        &:hover {
+          color: $black;
+        }
+      }
+      img {
+        height: 12rem;
+      }
+      .content {
+        h3 {
+          font-size: 1.7rem;
+          color: $black;
+        }
+        form {
+          padding: 1rem 0;
+          display: flex;
+          gap: 0.5rem;
+          align-items: center;
+
+          span {
+            font-size: 1.5rem;
+            color: $light-color;
+          }
+          input {
+            width: 7rem;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            background: $light-bg;
+            color: $light-color;
+            font-size: 1.5rem;
+          }
+        }
+        .price {
+          font-size: 2rem;
+          color: #f19dac;
+
+          span {
+            font-size: 1.5rem;
+            color: $light-color;
+            text-decoration: line-through;
+          }
+        }
+      }
+    }
+  }
+  .cart-total {
+    margin-top: 2rem;
+    box-shadow: $box-shadow;
+    border: $border;
+    border-color: 0.5rem;
+    background: $white;
+    padding: 2rem;
+    padding-top: 1rem;
+
+    h3 {
+      padding-top: 1rem;
+      font-size: 2rem;
+      color: $black;
+
+      span {
+        color: $heading;
+      }
+    }
+  }
+}
+
 .quick-links {
   display: flex;
   align-items: center;
   gap: 2rem;
-  background: $github-color-bold;
+  background: $black;
   justify-content: space-between;
   .logo {
     font-size: 2.5rem;
@@ -390,7 +505,7 @@ section {
       color: $white;
 
       &:hover {
-        color: $light-color;
+        color: $github-color-bold;
       }
     }
   }
@@ -401,7 +516,7 @@ section {
       margin-left: 2rem;
 
       &:hover {
-        color: $light-color;
+        color: $github-color-bold;
       }
     }
   }
@@ -418,7 +533,7 @@ section {
     font-size: 2rem;
     color: $light-color;
     span {
-      color: $blue;
+      color: #ef647e;
     }
   }
   img {
@@ -484,15 +599,17 @@ section {
         transform: scale(1.1);
       }
       img {
+        background-color: white;
         height: 100%;
         width: 100%;
-        object-fit: cover;
+        object-fit: contain;
+        object-position: 77%;
       }
       .content {
         position: absolute;
         top: 50%;
         left: 5%;
-        transform: translateY(-50%) rotate(45deg);
+        transform: translateY(-50%) rotate(50deg);
 
         span {
           font-size: 1.7rem;
@@ -501,7 +618,7 @@ section {
         h3 {
           font-size: 2rem;
           padding: 0.5rem 0;
-          color: $black;
+          color: $github-color-bold;
         }
       }
     }
@@ -521,6 +638,7 @@ section {
       align-items: center;
       gap: 1rem;
       background: $white;
+      cursor: pointer;
 
       &:hover {
         .image {
@@ -579,7 +697,7 @@ section {
       background: $white;
       box-shadow: $box-shadow;
       &:hover {
-        background: $black;
+        background: #3333334d;
         h3 {
           color: $white;
         }
@@ -610,10 +728,11 @@ section {
       overflow: hidden;
       &:hover .image {
         .hover-img {
-          display: inline-block;
+          // display: inline-block;
         }
         .main-img {
-          display: none;
+          transform: scale(1.2);
+          // display: none;
         }
         .icons {
           left: 2rem;
@@ -651,20 +770,23 @@ section {
         }
       }
       .content {
-        background: $light-bg;
+        // background: $light-bg;
         padding: 2rem;
         h3 {
+          height: 6rem;
           font-size: 2rem;
           color: $black;
         }
 
         .price {
+          padding: 1.5rem 0;
           font-size: 2.2rem;
-          color: $github-color;
+          color: red;
 
           span {
+            padding-left: 1rem;
             color: $light-color;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             text-decoration: line-through;
           }
         }
@@ -708,13 +830,15 @@ section {
         transform: translateY(-50%);
 
         span {
+          text-shadow: 2px 2px 4px #000000;
           font-size: 1.7rem;
-          color: $github-color;
+          color: $white;
         }
         h3 {
+          text-shadow: 2px 2px 4px #000000;
           padding-top: 0.5rem;
           font-size: 2rem;
-          color: $black;
+          color: $white;
         }
       }
     }
@@ -876,6 +1000,7 @@ section {
   }
   section {
     padding: 3rem 2rem;
+    padding-top: 6rem;
   }
 }
 
@@ -960,7 +1085,6 @@ section {
     }
     .icons a,
     .icons div {
-      margin: 0 1rem;
     }
   }
   .home {
@@ -980,5 +1104,22 @@ section {
   }
   .content form .inputBox input {
     width: 100%;
+  }
+  .shopping-cart .cart-total {
+    text-align: center;
+
+    .btn {
+      width: 100%;
+    }
+  }
+  .product-banner .box-container .box .content {
+    position: absolute;
+    top: 78%;
+    left: 5%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  .products .box-container .box .image .icons {
+    left: 2rem;
   }
 }

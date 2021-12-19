@@ -59,3 +59,27 @@ var swiper = new Swiper(".review-slider", {
     },
   },
 });
+
+let btn = document.querySelectorAll(".btn-contact");
+btn.forEach(
+  (value) =>
+    (value.onclick = (e) => {
+      e.preventDefault();
+      swal("Good job!", "Thank you for using this service!", "success");
+    })
+);
+
+function msg() {
+  swal("seems to be!", "...This feature is still under development!");
+}
+
+let homeBox = document.querySelectorAll(".arrivals .box");
+homeBox.forEach(
+  (item) =>
+    (item.onclick = () => {
+      swal("Good job!", "redirect to product page...", "info");
+      setTimeout(function () {
+        window.location.replace("./products.html");
+      }, 1500);
+    })
+);

@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="../images/meme.jpg" />
-    <title>Ecommerce#products</title>
+    <link rel="shortcut icon" href="images/iconAT.png" />
+    <title>A&T-Store - Products</title>
 
     <!-- link awesome -->
     <link
@@ -18,12 +18,12 @@
       href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
     />
     <!-- css file -->
-    <link rel="stylesheet" href="../style/ui.css" />
+    <link rel="stylesheet" href="style/ui.css" />
   </head>
   <body>
     <!-- header section -->
     <header class="header">
-      <a href="#" class="logo"><i class="fas fa-store"></i>A&T-Store</a>
+      <a href="home.html" class="logo"><i class="fas fa-store"></i>A&T-Store</a>
 
       <form action="" class="search-form">
         <input type="search" id="search-box" placeholder="search here..." />
@@ -33,9 +33,12 @@
       <div class="icons">
         <div id="menu-btn" class="fas fa-bars"></div>
         <div id="search-btn" class="fas fa-search"></div>
-        <a href="login.html" class="fas fa-user"></a>
+        <a href="#" onclick="msg()" class="fas fa-user"></a>
         <!-- <a href="#" class="fas fa-heart"></a> -->
-        <a href="cart.html" class="fas fa-shopping-cart"></a>
+        <a href="cart.html" class="cart">
+          <div class="fas fa-shopping-cart"></div>
+          <span class="count"></span>
+        </a>
       </div>
     </header>
     <!-- end header -->
@@ -44,60 +47,79 @@
       <div class="overlay"></div>
       <div id="close-side-bar" class="fas fa-times"></div>
       <div class="user">
-        <img src="../images/meme.jpg" alt="" />
+        <img src="images/meme.jpg" alt="" />
         <h3>Devnaplandau</h3>
-        <a href="#">log out</a>
+        <a href="./index.html">log out</a>
       </div>
 
       <nav class="navbar">
         <a href="home.html"><i class="fas fa-angle-right"></i>home</a>
-        <a href="about.html"><i class="fas fa-angle-right"></i>about</a>
+        <a href="cart.html"><i class="fas fa-angle-right"></i>cart</a>
         <a href="products.html"><i class="fas fa-angle-right"></i>products</a>
         <a href="contact.html"><i class="fas fa-angle-right"></i>contact</a>
-        <a href="cart.html"><i class="fas fa-angle-right"></i>cart</a>
+        <a href="about.html"><i class="fas fa-angle-right"></i>about</a>
       </nav>
     </div>
     <!-- end navbar -->
+    <!-- product banner starts -->
+    <section class="product-banner">
+      <h1 class="heading">weekend <span>deals</span></h1>
+      <div class="box-container">
+        <div class="box">
+          <img
+            src="https://cdn2.yame.vn/pimg/balo-y2010-h79-0019868/fbe41791-106d-3f00-595c-0017b500d145.jpg?w=540&h=756"
+            alt=""
+          />
+          <div class="content">
+            <span>special offer</span>
+            <h3>upto 50% off</h3>
+            <a href="#" class="btn">See details</a>
+          </div>
+        </div>
 
+        <div class="box">
+          <img
+            src="https://product.hstatic.net/1000230642/product/artboard_1-100_c6cd15bd196d4f4aa2dc869c2d02920d_1024x1024.jpg"
+            alt=""
+          />
+          <div class="content">
+            <span>special offer</span>
+            <h3>upto 50% off</h3>
+            <a href="#" class="btn">See details</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end banner -->
     <!-- category starts -->
 
     <section class="category">
       <h1 class="heading">Store by <span>category</span></h1>
 
       <div class="box-container">
-        <a href="#" class="box">
-          <img src="../images/cat_img1.png" alt="" />
-          <h3>televisions</h3>
+        <a href="#" class="box nav" data="Tshirts">
+          <img src="images/clothes-hanger.png" alt="" />
+          <h3>T-shirt</h3>
         </a>
 
-        <a href="#" class="box">
-          <img src="../images/cat_img2.png" alt="" />
-          <h3>smartphones</h3>
+        <a href="#" class="box nav" data="Jackets">
+          <img src="images/jacket.png" alt="" />
+          <h3>Jacket & Hoodie</h3>
         </a>
 
-        <a href="#" class="box">
-          <img src="../images/cat_img3.png" alt="" />
-          <h3>headphones</h3>
+        <a href="#" class="box nav" data="Pants">
+          <img src="images/pants.png" alt="" />
+          <h3>Fashion Trousers</h3>
         </a>
 
-        <a href="#" class="box">
-          <img src="../images/cat_img4.png" alt="" />
-          <h3>smartwatchs</h3>
+        <a href="#" class="box nav" data="Bags">
+          <img src="images/school-bag.png" alt="" />
+          <h3>Fashion Bag</h3>
         </a>
 
-        <a href="#" class="box">
-          <img src="../images/cat_img5.png" alt="" />
-          <h3>games</h3>
-        </a>
-
-        <a href="#" class="box">
-          <img src="../images/cat_img6.png" alt="" />
-          <h3>cameras</h3>
-        </a>
-
-        <a href="#" class="box">
-          <img src="../images/cat_img7.png" alt="" />
-          <h3>speakers</h3>
+        <a href="#" class="box nav" data="Accessories">
+          <img src="images/fashion.png" alt="" />
+          <h3>Fashion Accessories</h3>
         </a>
       </div>
     </section>
@@ -105,14 +127,18 @@
     <!-- category end -->
 
     <!-- products sections -->
-    <section class="products">
-      <h1 class="heading">featured <span>products</span></h1>
-      <div class="box-container">
-        <div class="box">
+    <section class="products heading-products">
+      <h1 class="heading">list of <span>products</span></h1>
+      <div class="box-container showListProducts">
+        <!-- <div class="box">
           <div class="image">
-            <img src="../images/product-1.jpg" class="main-img" alt="" />
-            <img src="../images/product-1-hover.jpg" class="hover-img" alt="" />
-            <div class="icons">
+            <img
+              src="https://cdn2.yame.vn/pimg/ao-thun-co-tron-on-gian-m25-0020399/3f056462-dfc4-2b00-b005-001892944af3.jpg?w=540&h=756"
+              class="main-img"
+              alt=""
+            />
+            <img src="images/product-1-jpg" class="hover-img" alt="" />
+            <div class="icons product-icon">
               <a href="#" class="fas fa-shopping-cart"></a>
               <a href="#" class="fas fa-search-plus"></a>
               <a href="#" class="fas fa-heart"></a>
@@ -130,155 +156,10 @@
               <i class="fas fa-star-half-alt"></i>
             </div>
           </div>
-        </div>
-
-        <div class="box">
-          <div class="image">
-            <img src="../images/product-2.jpg" class="main-img" alt="" />
-            <img src="../images/product-2-hover.jpg" class="hover-img" alt="" />
-            <div class="icons">
-              <a href="#" class="fas fa-shopping-cart"></a>
-              <a href="#" class="fas fa-search-plus"></a>
-              <a href="#" class="fas fa-heart"></a>
-              <a href="#" class="fas fa-share"></a>
-            </div>
-          </div>
-          <div class="content">
-            <h3>smartphone</h3>
-            <div class="price">$249.99 <span>$399.99</span></div>
-            <div class="stars">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star-half-alt"></i>
-            </div>
-          </div>
-        </div>
-
-        <div class="box">
-          <div class="image">
-            <img src="../images/product-3.jpg" class="main-img" alt="" />
-            <img src="../images/product-3-hover.jpg" class="hover-img" alt="" />
-            <div class="icons">
-              <a href="#" class="fas fa-shopping-cart"></a>
-              <a href="#" class="fas fa-search-plus"></a>
-              <a href="#" class="fas fa-heart"></a>
-              <a href="#" class="fas fa-share"></a>
-            </div>
-          </div>
-          <div class="content">
-            <h3>smartphone</h3>
-            <div class="price">$249.99 <span>$399.99</span></div>
-            <div class="stars">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star-half-alt"></i>
-            </div>
-          </div>
-        </div>
-
-        <div class="box">
-          <div class="image">
-            <img src="../images/product-4.jpg" class="main-img" alt="" />
-            <img src="../images/product-4-hover.jpg" class="hover-img" alt="" />
-            <div class="icons">
-              <a href="#" class="fas fa-shopping-cart"></a>
-              <a href="#" class="fas fa-search-plus"></a>
-              <a href="#" class="fas fa-heart"></a>
-              <a href="#" class="fas fa-share"></a>
-            </div>
-          </div>
-          <div class="content">
-            <h3>smartphone</h3>
-            <div class="price">$249.99 <span>$399.99</span></div>
-            <div class="stars">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star-half-alt"></i>
-            </div>
-          </div>
-        </div>
-
-        <div class="box">
-          <div class="image">
-            <img src="../images/product-5.jpg" class="main-img" alt="" />
-            <img src="../images/product-5-hover.jpg" class="hover-img" alt="" />
-            <div class="icons">
-              <a href="#" class="fas fa-shopping-cart"></a>
-              <a href="#" class="fas fa-search-plus"></a>
-              <a href="#" class="fas fa-heart"></a>
-              <a href="#" class="fas fa-share"></a>
-            </div>
-          </div>
-          <div class="content">
-            <h3>smartphone</h3>
-            <div class="price">$249.99 <span>$399.99</span></div>
-            <div class="stars">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star-half-alt"></i>
-            </div>
-          </div>
-        </div>
-
-        <div class="box">
-          <div class="image">
-            <img src="../images/product-6.jpg" class="main-img" alt="" />
-            <img src="../images/product-6-hover.jpg" class="hover-img" alt="" />
-            <div class="icons">
-              <a href="#" class="fas fa-shopping-cart"></a>
-              <a href="#" class="fas fa-search-plus"></a>
-              <a href="#" class="fas fa-heart"></a>
-              <a href="#" class="fas fa-share"></a>
-            </div>
-          </div>
-          <div class="content">
-            <h3>smartphone</h3>
-            <div class="price">$249.99 <span>$399.99</span></div>
-            <div class="stars">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star-half-alt"></i>
-            </div>
-          </div>
-        </div>
+        </div> -->
       </div>
     </section>
     <!-- products end -->
-
-    <!-- product banner starts -->
-    <section class="product-banner">
-      <h1 class="headind"><span>deal</span> of the day</h1>
-      <div class="box-container">
-        <div class="box">
-          <img src="../images/product-banner-1.jpg" alt="" />
-          <div class="content">
-            <span>special offer</span>
-            <h3>upto 50% off</h3>
-            <a href="#" class="btn">shop now</a>
-          </div>
-        </div>
-
-        <div class="box">
-          <img src="../images/product-banner-2.jpg" alt="" />
-          <div class="content">
-            <span>special offer</span>
-            <h3>upto 50% off</h3>
-            <a href="#" class="btn">shop now</a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- end banner -->
 
     <!-- footer section  -->
 
@@ -287,10 +168,10 @@
 
       <div class="links">
         <a href="home.html">home</a>
-        <a href="about.html">about</a>
+        <a href="cart.html">cart</a>
         <a href="products.html">products</a>
         <a href="contact.html">contact</a>
-        <a href="cart.html">cart</a>
+        <a href="about.html">about</a>
       </div>
 
       <div class="share">
@@ -309,6 +190,9 @@
     <!-- swiper js tạo hiệu ứng thanh trược -->
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <!-- js file -->
-    <script src="../app/logic.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <script src="app/logic.js"></script>
+    <script src="app/handle-product.js"></script>
   </body>
 </html>

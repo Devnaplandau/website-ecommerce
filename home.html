@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="./images/store.png" />
-    <title>Ecommerce-Devnaplandau</title>
+    <link rel="shortcut icon" href="./images/iconAT.png" />
+    <title>A&T-Store - Home</title>
 
     <!-- link awesome -->
     <link
@@ -35,9 +35,12 @@
       <div class="icons">
         <div id="menu-btn" class="fas fa-bars"></div>
         <div id="search-btn" class="fas fa-search"></div>
-        <a href="login.html" class="fas fa-user"></a>
+        <a href="#" onclick="msg()" class="fas fa-user"></a>
         <!-- <a href="#" class="fas fa-heart"></a> -->
-        <a href="cart.html" class="fas fa-shopping-cart"></a>
+        <a href="cart.html" class="cart">
+          <div class="fas fa-shopping-cart"></div>
+          <span class="count"></span>
+        </a>
       </div>
     </header>
     <!-- end header -->
@@ -53,49 +56,57 @@
 
       <nav class="navbar">
         <a href="home.html"><i class="fas fa-angle-right"></i>home</a>
-        <a href="about.html"><i class="fas fa-angle-right"></i>about</a>
+        <a href="cart.html"><i class="fas fa-angle-right"></i>cart</a>
         <a href="products.html"><i class="fas fa-angle-right"></i>products</a>
         <a href="contact.html"><i class="fas fa-angle-right"></i>contact</a>
-        <a href="login.html"><i class="fas fa-angle-right"></i>login</a>
-        <a href="register.html"><i class="fas fa-angle-right"></i>register</a>
-        <a href="cart.html"><i class="fas fa-angle-right"></i>cart</a>
+        <a href="about.html"><i class="fas fa-angle-right"></i>about</a>
       </nav>
     </div>
     <!-- end navbar -->
     <!-- home starts -->
     <section class="home">
+      <h1 class="heading">today's <span>products</span></h1>
       <div class="swiper home-slider">
         <div class="swiper-wrapper">
           <div class="swiper-slide slide">
             <div class="image">
-              <img src="../images/home-img-1.jpg" alt="" />
+              <img
+                src="https://cdn2.yame.vn/pimg/ao-khoac-hoodie-on-gian-y-nguyen-ban-ver4-0020365/dacd4c10-85dc-1201-0e59-0018910de937.jpg?w=540&h=756"
+                alt=""
+              />
             </div>
             <div class="content">
-              <span>upto 50% off</span>
-              <h3>smartphones</h3>
-              <a href="#" class="btn">Show now</a>
+              <span>upto 40% off</span>
+              <h3>Hoodie</h3>
+              <a href="products.html" class="btn">Show now</a>
             </div>
           </div>
 
           <div class="swiper-slide slide">
             <div class="image">
-              <img src="../images/home-img-2.jpg" alt="" />
+              <img
+                src="https://cdn2.yame.vn/pimg/balo-big-y-nguyen-ban-18-ver2-0020373/bcbf85df-601e-1700-3864-0018788406c1.jpg?w=540&h=756"
+                alt=""
+              />
             </div>
             <div class="content">
-              <span>upto 50% off</span>
-              <h3>smartwatch</h3>
-              <a href="#" class="btn">Show now</a>
+              <span>upto 30% off</span>
+              <h3>Balo Big Y</h3>
+              <a href="products.html" class="btn">Show now</a>
             </div>
           </div>
 
           <div class="swiper-slide slide">
             <div class="image">
-              <img src="../images/home-img-3.jpg" alt="" />
+              <img
+                src="https://cdn2.yame.vn/pimg/ao-thun-co-tron-linh-vat-bbuff-ver10-0020445/bbe76d46-63c7-1700-1385-00189739ef77.jpg?w=540&h=756"
+                alt=""
+              />
             </div>
             <div class="content">
               <span>upto 50% off</span>
-              <h3>headphone</h3>
-              <a href="#" class="btn">Show now</a>
+              <h3>Unisex</h3>
+              <a href="products.html" class="btn">Show now</a>
             </div>
           </div>
         </div>
@@ -109,27 +120,36 @@
     <!-- area banner -->
     <section class="banner">
       <div class="box-container">
-        <a href="#" class="box">
-          <img src="../images/banner-1.jpg" alt="" />
+        <a href="products.html" class="box">
+          <img
+            src="https://cdn2.yame.vn/pimg/ao-khoac-varsity-y-nguyen-ban-18--ver8-0020407/3bffb6d7-dacc-1601-9dd0-00189c163e70.jpg?w=540&h=756"
+            alt=""
+          />
           <div class="content">
             <span>special offer</span>
-            <h3>uptop 50% off</h3>
+            <h3>uptop 30% off</h3>
           </div>
         </a>
 
-        <a href="#" class="box">
-          <img src="../images/banner-2.jpg" alt="" />
+        <a href="products.html" class="box">
+          <img
+            src="https://cdn2.yame.vn/pimg/quan-dai-jean-slimfit-on-gian-than-co-ai-valknut-ver1-0020477/0119ebd2-f48c-1200-d120-00189c1b8ae1.jpg?w=540&h=756"
+            alt=""
+          />
           <div class="content">
             <span>special offer</span>
-            <h3>uptop 50% off</h3>
+            <h3>uptop 5% off</h3>
           </div>
         </a>
 
-        <a href="#" class="box">
-          <img src="../images/banner-3.jpg" alt="" />
+        <a href="products.html" class="box">
+          <img
+            src="https://cdn2.yame.vn/pimg/pktt-day-nit-on-gian-m18-0020428/b8be4b8c-1611-3400-172f-001891ca6e01.jpg?w=540&h=756"
+            alt=""
+          />
           <div class="content">
             <span>special offer</span>
-            <h3>uptop 50% off</h3>
+            <h3>uptop 20% off</h3>
           </div>
         </a>
       </div>
@@ -143,12 +163,20 @@
       <div class="box-container">
         <div class="box">
           <div class="image">
-            <img src="../images/arrival-1.jpg" class="main-img" alt="" />
-            <img src="../images/arrival-1-hover.jpg" class="hover-img" alt="" />
+            <img
+              src="https://cdn2.yame.vn/pimg/ao-khoac-thun-on-gian-solid-m3-0020222/206348f8-1c31-0300-4ed7-001878816ef2.jpg?w=540&h=756"
+              class="main-img"
+              alt=""
+            />
+            <img
+              src="https://cdn2.yame.vn/pimg/ao-khoac-thun-on-gian-solid-m3-0020222/66133c67-0a48-0900-13dd-001878828ccb.jpg?w=540&h=756"
+              class="hover-img"
+              alt=""
+            />
           </div>
           <div class="content">
-            <h3>HD televison</h3>
-            <div class="price">$299.99 <span>$399.99</span></div>
+            <h3>Simple Classic Jacket</h3>
+            <div class="price">$18 <span>$20</span></div>
             <div class="stars">
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
@@ -161,12 +189,20 @@
 
         <div class="box">
           <div class="image">
-            <img src="../images/arrival-2.jpg" class="main-img" alt="" />
-            <img src="../images/arrival-2-hover.jpg" class="hover-img" alt="" />
+            <img
+              src="https://cdn2.yame.vn/pimg/quan-jean-nam-y2010-dai-b19-0019174/85528650-03c4-1400-9de6-0017cd44c17c.jpg?w=540&h=756"
+              class="main-img"
+              alt=""
+            />
+            <img
+              src="https://cdn2.yame.vn/pimg/quan-jean-nam-y2010-dai-b19-0019174/218a105d-d196-1600-ab67-0017cd44f238.jpg?w=540&h=756"
+              class="hover-img"
+              alt=""
+            />
           </div>
           <div class="content">
-            <h3>lenovo laptop</h3>
-            <div class="price">$299.99 <span>$399.99</span></div>
+            <h3>Simple Slim Fit Jeans Long Pants</h3>
+            <div class="price">$104 <span>$150</span></div>
             <div class="stars">
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
@@ -179,12 +215,20 @@
 
         <div class="box">
           <div class="image">
-            <img src="../images/arrival-3.jpg" class="main-img" alt="" />
-            <img src="../images/arrival-3-hover.jpg" class="hover-img" alt="" />
+            <img
+              src="https://cdn2.yame.vn/pimg/balo-fit-on-gian-y-nguyen-ban-ver3-0020362/ea167587-1e93-1900-f599-001878841f6e.jpg?w=540&h=756"
+              class="main-img"
+              alt=""
+            />
+            <img
+              src="https://cdn2.yame.vn/pimg/balo-fit-on-gian-y-nguyen-ban-ver3-0020362/ea18bac9-8042-1a00-43d2-001878841fba.jpg?w=540&h=756"
+              class="hover-img"
+              alt=""
+            />
           </div>
           <div class="content">
-            <h3>new smartphone</h3>
-            <div class="price">$299.99 <span>$399.99</span></div>
+            <h3>Original Y Simple Fit Backpack</h3>
+            <div class="price">$20 <span>$50</span></div>
             <div class="stars">
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
@@ -197,12 +241,20 @@
 
         <div class="box">
           <div class="image">
-            <img src="../images/arrival-4.jpg" class="main-img" alt="" />
-            <img src="../images/arrival-4-hover.jpg" class="hover-img" alt="" />
+            <img
+              src="https://cdn2.yame.vn/pimg/balo-a-ky-lau-van-inh-ver1-0020088/1a486df3-51f1-3300-ddb3-0017b4ff104e.jpg?w=540&h=756"
+              class="main-img"
+              alt=""
+            />
+            <img
+              src="https://cdn2.yame.vn/pimg/balo-a-ky-lau-van-inh-ver1-0020088/41781fc2-2cb3-3400-9c0b-00188ec7075b.jpg?w=540&h=756"
+              class="hover-img"
+              alt=""
+            />
           </div>
           <div class="content">
-            <h3>new printers</h3>
-            <div class="price">$299.99 <span>$399.99</span></div>
+            <h3>Backpack Fit 12VAHDT Ky Lau Van Dinh</h3>
+            <div class="price">$9.99 <span>$159</span></div>
             <div class="stars">
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
@@ -215,12 +267,20 @@
 
         <div class="box">
           <div class="image">
-            <img src="../images/arrival-5.jpg" class="main-img" alt="" />
-            <img src="../images/arrival-5-hover.jpg" class="hover-img" alt="" />
+            <img
+              src="https://cdn2.yame.vn/pimg/dep-activewear-m1-0020282/52188655-a3d8-1b00-db0b-0018788441a3.jpg?w=540&h=756"
+              class="main-img"
+              alt=""
+            />
+            <img
+              src="https://cdn2.yame.vn/pimg/dep-activewear-m1-0020282/216d5397-e779-1c00-326a-0018788441d7.jpg?w=540&h=756"
+              class="hover-img"
+              alt=""
+            />
           </div>
           <div class="content">
-            <h3>new headphones</h3>
-            <div class="price">$299.99 <span>$399.99</span></div>
+            <h3>Sports Slippers</h3>
+            <div class="price">$29<span> $39</span></div>
             <div class="stars">
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
@@ -233,12 +293,20 @@
 
         <div class="box">
           <div class="image">
-            <img src="../images/arrival-6.jpg" class="main-img" alt="" />
-            <img src="../images/arrival-6-hover.jpg" class="hover-img" alt="" />
+            <img
+              src="https://cdn2.yame.vn/pimg/pktt-vi-linh-vat-bbuff-ver2-0020324/db3b2222-c63a-4700-b0bf-0018893e2bc6.jpg?w=540&h=756"
+              class="main-img"
+              alt=""
+            />
+            <img
+              src="https://cdn2.yame.vn/pimg/pktt-vi-linh-vat-bbuff-ver2-0020324/17566829-2c11-4800-fa60-0018893e2bc8.jpg?w=540&h=756"
+              class="hover-img"
+              alt=""
+            />
           </div>
           <div class="content">
-            <h3>new speakers</h3>
-            <div class="price">$299.99 <span>$399.99</span></div>
+            <h3>PKTT Mascot Wallet Bbuff</h3>
+            <div class="price">$9.99 <span>$99.99</span></div>
             <div class="stars">
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
@@ -252,191 +320,6 @@
     </section>
     <!-- end arrivals -->
 
-    <!-- about sections -->
-
-    <section class="about">
-      <div class="image">
-        <img src="../images/store.png" alt="" />
-      </div>
-
-      <div class="content">
-        <h3>our story</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
-          ipsum sit quos exercitationem. Laborum nulla dolorum nostrum possimus
-          tenetur at fugiat, consequuntur numquam vero, deleniti maiores
-          sapiente aperiam eaque blanditiis.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque soluta
-          hic assumenda eaque amet explicabo ab? Laboriosam eius nesciunt
-          asperiores odio, ducimus rerum delectus minus sapiente a, aliquam
-          blanditiis vel?
-        </p>
-        <a href="#" class="btn">read more</a>
-      </div>
-    </section>
-    <!-- end about -->
-
-    <!-- faqs câu hỏi thường gặp -->
-
-    <section class="faq">
-      <h1 class="heading">question & <span>answers</span></h1>
-      <div class="accordion-container">
-        <div class="accordion">
-          <div class="accordion-heading">
-            <h3>recruitment.</h3>
-            <i class="fas fa-angle-down"></i>
-          </div>
-          <div class="acconrdion-content">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa
-            earum, vel enim aliquid, dolorum quidem omnis ullam, voluptate
-            obcaecati id nemo eveniet! Tempore laboriosam necessitatibus animi
-            labore nostrum vitae cum?
-          </div>
-        </div>
-
-        <div class="accordion">
-          <div class="accordion-heading">
-            <h3>customer support.</h3>
-            <i class="fas fa-angle-down"></i>
-          </div>
-          <div class="acconrdion-content">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa
-            earum, vel enim aliquid, dolorum quidem omnis ullam, voluptate
-            obcaecati id nemo eveniet! Tempore laboriosam necessitatibus animi
-            labore nostrum vitae cum?
-          </div>
-        </div>
-
-        <div class="accordion">
-          <div class="accordion-heading">
-            <h3>payment methods.</h3>
-            <i class="fas fa-angle-down"></i>
-          </div>
-          <div class="acconrdion-content">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa
-            earum, vel enim aliquid, dolorum quidem omnis ullam, voluptate
-            obcaecati id nemo eveniet! Tempore laboriosam necessitatibus animi
-            labore nostrum vitae cum?
-          </div>
-        </div>
-
-        <div class="accordion">
-          <div class="accordion-heading">
-            <h3>the store's branches.</h3>
-            <i class="fas fa-angle-down"></i>
-          </div>
-          <div class="acconrdion-content">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa
-            earum, vel enim aliquid, dolorum quidem omnis ullam, voluptate
-            obcaecati id nemo eveniet! Tempore laboriosam necessitatibus animi
-            labore nostrum vitae cum?
-          </div>
-        </div>
-
-        <div class="accordion">
-          <div class="accordion-heading">
-            <h3>promotions and membership registration.</h3>
-            <i class="fas fa-angle-down"></i>
-          </div>
-          <div class="acconrdion-content">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa
-            earum, vel enim aliquid, dolorum quidem omnis ullam, voluptate
-            obcaecati id nemo eveniet! Tempore laboriosam necessitatibus animi
-            labore nostrum vitae cum?
-          </div>
-        </div>
-
-        <div class="accordion">
-          <div class="accordion-heading">
-            <h3>return and refund policy.</h3>
-            <i class="fas fa-angle-down"></i>
-          </div>
-          <div class="acconrdion-content">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa
-            earum, vel enim aliquid, dolorum quidem omnis ullam, voluptate
-            obcaecati id nemo eveniet! Tempore laboriosam necessitatibus animi
-            labore nostrum vitae cum?
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- end fas -->
-
-    <!-- reviews starts -->
-    <section class="review">
-      <h1 class="heading">clients <span>review</span></h1>
-
-      <div class="swiper review-slider">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide slide">
-            <img src="../images/meme.jpg" alt="" />
-            <h3>anonymous customer</h3>
-            <span>member silver</span>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Accusantium ipsum placeat eligendi magnam, officia ex sit
-              aspernatur architecto repellendus velit?
-            </p>
-          </div>
-
-          <div class="swiper-slide slide">
-            <img src="../images/meme.jpg" alt="" />
-            <h3>anonymous customer</h3>
-            <span>silver member</span>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Accusantium ipsum placeat eligendi magnam, officia ex sit
-              aspernatur architecto repellendus velit?
-            </p>
-          </div>
-
-          <div class="swiper-slide slide">
-            <img src="../images/meme.jpg" alt="" />
-            <h3>anonymous customer</h3>
-            <span>member</span>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, nam.
-            </p>
-          </div>
-
-          <div class="swiper-slide slide">
-            <img src="../images/meme.jpg" alt="" />
-            <h3>anonymous customer</h3>
-            <span>member</span>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex nemo,
-              amet facere quae tempore ipsum.
-            </p>
-          </div>
-
-          <div class="swiper-slide slide">
-            <img src="../images/meme.jpg" alt="" />
-            <h3>anonymous customer</h3>
-            <span>gold member</span>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Accusantium ipsum placeat eligendi magnam, officia ex sit
-              aspernatur architecto repellendus velit?
-            </p>
-          </div>
-
-          <div class="swiper-slide slide">
-            <img src="../images/meme.jpg" alt="" />
-            <h3>anonymous customer</h3>
-            <span>diamond member</span>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Accusantium ipsum placeat eligendi magnam, officia ex sit
-              aspernatur architecto repellendus velit?
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- end reviews -->
-
     <!-- footer section  -->
 
     <section class="quick-links">
@@ -444,10 +327,10 @@
 
       <div class="links">
         <a href="home.html">home</a>
-        <a href="about.html">about</a>
+        <a href="cart.html">cart</a>
         <a href="products.html">products</a>
         <a href="contact.html">contact</a>
-        <a href="cart.html">cart</a>
+        <a href="about.html">about</a>
       </div>
 
       <div class="share">
@@ -466,6 +349,7 @@
     <!-- swiper js tạo hiệu ứng thanh trược -->
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <!-- js file -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="app/logic.js"></script>
   </body>
 </html>
