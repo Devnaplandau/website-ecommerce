@@ -2,7 +2,7 @@ const get = document.querySelector.bind(document);
 const getAll = document.querySelectorAll.bind(document);
 
 let listProducts = get(".showListProducts");
-let api = "./app/mockupApi/dataProduct.json";
+let api = "../app/dataProduct.json";
 let test = getAll(".nav");
 let headingProduct = get(".heading-products");
 const pageProduct = {
