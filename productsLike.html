@@ -13,64 +13,10 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
     <!-- Swiper js -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
-    />
     <!-- css file -->
     <link rel="stylesheet" href="style/ui.css" />
   </head>
   <body>
-    <!-- overlay-info-payment -->
-    <div class="overlay-payment">
-      <div class="form-get-info">
-        <div class="fas fa-times custom"></div>
-        <h1 class="title"><span>Billing</span> Information</h1>
-        <div class="formdata">
-          <div class="form__group">
-            <label for="">Name</label>
-            <input
-              type="text"
-              name=""
-              id=""
-              placeholder="    Easier in receiving goods..."
-              rules="required"
-            />
-          </div>
-          <div class="form__group">
-            <label for="">Phone</label>
-            <input
-              type="number"
-              name=""
-              id=""
-              placeholder="    Use contact to confirm..."
-              rules="required"
-            />
-          </div>
-          <div class="form__group">
-            <label for="">Address</label>
-            <input
-              type="text"
-              name=""
-              id=""
-              placeholder="    Address where you can receive the goods..."
-              rules="required"
-            />
-          </div>
-          <div class="form__group">
-            <label for="">Email</label>
-            <input
-              type="email"
-              name=""
-              id=""
-              placeholder="    Easier order tracking..."
-              rules="required"
-            />
-          </div>
-        </div>
-        <div class="btn">Confirm</div>
-      </div>
-    </div>
     <!-- header section -->
     <header class="header">
       <a href="home.html" class="logo"><i class="fas fa-store"></i>A&T-Store</a>
@@ -113,39 +59,12 @@
     <!-- end navbar -->
 
     <section class="shopping-cart">
-      <h1 class="heading">your <span>products</span></h1>
-      <div class="box-container">
-        <div class="box">
-          <i class="fas fa-times"></i>
-          <img src="images/meme.jpg" alt="" />
-          <div class="content">
-            <h3>smartphone</h3>
-            <form action="">
-              <span>quatity: </span>
-              <input type="number" name="" id="" value="1" />
-            </form>
-            <div class="price">$249.99 <span>#999</span></div>
-          </div>
-        </div>
-        <!--  -->
-        <!-- <div class="box">
-          <i class="fas fa-times"></i>
-          <img src="images/meme.jpg" alt="" />
-          <div class="content">
-            <h3>smartphone</h3>
-            <form action="">
-              <span>quatity: </span>
-              <input type="number" name="" id="" value="1" />
-            </form>
-            <div class="price">$249.99 <span>#999</span></div>
-          </div>
-        </div> -->
-        <!--  -->
+      <h1 class="heading">favorite <span>products</span></h1>
+      <div class="box-container favorite">
+        <!-- render sản phẩm -->
       </div>
-      <div class="cart-total">
-        <h3>subtotal : <span>$19999</span></h3>
-        <a href="#" class="btn btn-payment">payment</a>
-      </div>
+
+      <div class="btn clearAllLikeProduct">Clear</div>
     </section>
 
     <!-- footer section  -->
@@ -174,11 +93,10 @@
     </section>
 
     <!-- end footer -->
-    <!-- swiper js tạo hiệu ứng thanh trược -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <!-- js file -->
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script src="app/cart.js"></script>
+    <script src="app/likeProductPage.js"></script>
     <script src="app/logic.js"></script>
   </body>
 </html>

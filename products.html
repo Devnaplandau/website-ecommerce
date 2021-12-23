@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="images/iconAT.png" />
     <title>A&T-Store - Products</title>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- link awesome -->
     <link
       rel="stylesheet"
@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="style/ui.css" />
   </head>
   <body>
+    <div id="toast"></div>
     <!-- header section -->
     <header class="header">
       <a href="home.html" class="logo"><i class="fas fa-store"></i>A&T-Store</a>
@@ -34,7 +35,7 @@
         <div id="menu-btn" class="fas fa-bars"></div>
         <div id="search-btn" class="fas fa-search"></div>
         <a href="#" onclick="msg()" class="fas fa-user"></a>
-        <!-- <a href="#" class="fas fa-heart"></a> -->
+        <a href="productsLike.html" class="fas fa-heart"></a>
         <a href="cart.html" class="cart">
           <div class="fas fa-shopping-cart"></div>
           <span class="count"></span>
@@ -67,25 +68,25 @@
       <div class="box-container">
         <div class="box">
           <img
-            src="https://cdn2.yame.vn/pimg/balo-y2010-h79-0019868/fbe41791-106d-3f00-595c-0017b500d145.jpg?w=540&h=756"
+            src="https://cdn2.yame.vn/pimg/balo-b-darkness-hunters-ver2-0020221/24cd8c32-ae8b-1000-2c75-0017fc651aa4.jpg?w=540&h=756"
             alt=""
           />
           <div class="content">
             <span>special offer</span>
             <h3>upto 50% off</h3>
-            <a href="#" class="btn">See details</a>
+            <a href="#products" class="btn">See details</a>
           </div>
         </div>
 
         <div class="box">
           <img
-            src="https://product.hstatic.net/1000230642/product/artboard_1-100_c6cd15bd196d4f4aa2dc869c2d02920d_1024x1024.jpg"
+            src="https://cdn2.yame.vn/pimg/ao-khoac-varsity-y-nguyen-ban-18--ver8-0020406/1e1fdaf0-38a4-0701-4a61-00189c16155a.jpg?w=540&h=756"
             alt=""
           />
           <div class="content">
             <span>special offer</span>
             <h3>upto 50% off</h3>
-            <a href="#" class="btn">See details</a>
+            <a href="#products" class="btn">See details</a>
           </div>
         </div>
       </div>
@@ -127,17 +128,16 @@
     <!-- category end -->
 
     <!-- products sections -->
-    <section class="products heading-products">
+    <section class="products heading-products" id="products">
       <h1 class="heading">list of <span>products</span></h1>
       <div class="box-container showListProducts">
         <!-- <div class="box">
           <div class="image">
+            <div class="discount">30%</div>
             <img
               src="https://cdn2.yame.vn/pimg/ao-thun-co-tron-on-gian-m25-0020399/3f056462-dfc4-2b00-b005-001892944af3.jpg?w=540&h=756"
-              class="main-img"
-              alt=""
+              class="main-img screen-image"
             />
-            <img src="images/product-1-jpg" class="hover-img" alt="" />
             <div class="icons product-icon">
               <a href="#" class="fas fa-shopping-cart"></a>
               <a href="#" class="fas fa-search-plus"></a>

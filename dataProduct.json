@@ -2,42 +2,42 @@
   {
     "Tshirts": [
       {
-        "id": 1,
+        "id": "'12qwe'",
         "name": "Simple Round Neck T-shirt",
         "price": 145000,
         "discount": 0.15,
         "image": "https://cdn2.yame.vn/pimg/ao-thun-co-tron-on-gian-m25-0020399/3f056462-dfc4-2b00-b005-001892944af3.jpg?w=540&h=756"
       },
       {
-        "id": 2,
+        "id": "'11edw'",
         "name": "Sports Round Neck T-shirt",
         "price": 285000,
-        "discount": 0.15,
+        "discount": 0.5,
         "image": "https://cdn2.yame.vn/pimg/ao-thun-tn-tc-on-gian-solid-m7-0020159/c0fda8d2-7fdf-4c00-1509-001818df9700.jpg?w=540&h=756"
       },
       {
-        "id": 3,
+        "id": "'421vds'",
         "name": "Simple Y Original Long Sleeve Shirt",
         "price": 225000,
         "discount": 0.15,
         "image": "https://cdn2.yame.vn/pimg/so-mi-tay-dai-on-gian-y-nguyen-ban-ver8-0020364/fab2b291-4008-f100-7798-0018910c9667.jpg?w=540&h=756"
       },
       {
-        "id": 4,
+        "id": "'1323sfge'",
         "name": "Darkness Hunters Nature's Amazing Round Neck T-shirt",
         "price": 225000,
         "discount": 0.1,
         "image": "https://cdn2.yame.vn/pimg/ao-thun-tn-r-darkness-hunters-ver6-0020225/e7b7b97c-8e35-5900-a009-001818e66742.jpg?w=540&h=756"
       },
       {
-        "id": 5,
+        "id": "'3145sfbaw'",
         "name": "Simple Leader Neck Shirt",
         "price": 295000,
         "discount": 0.25,
         "image": "https://cdn2.yame.vn/pimg/ao-thun-tn-r-secret-garden-m13-0020204/d0ffe21a-1d0a-0100-45ff-001819ae735c.jpg?w=540&h=756"
       },
       {
-        "id": 6,
+        "id": "'312hgj'",
         "name": "Ancient God Valknut Short Sleeve Shirt",
         "price": 285000,
         "discount": 0.15,
@@ -46,42 +46,42 @@
     ],
     "Jackets": [
       {
-        "id": 1,
+        "id": "'2134fsdf'",
         "name": "Simple Y Original Hoodie Jacket",
         "price": 385000,
         "discount": 0.15,
         "image": "https://cdn2.yame.vn/pimg/ao-khoac-hoodie-on-gian-y-nguyen-ban-ver4-0020365/dacd4c10-85dc-1201-0e59-0018910de937.jpg?w=540&h=756"
       },
       {
-        "id": 2,
+        "id": "'45536fdsf'",
         "name": "Ancient God Valknut's Varsity Coat",
         "price": 455000,
-        "discount": 0.15,
+        "discount": 0.5,
         "image": "https://cdn2.yame.vn/pimg/ao-khoac-varsity-than-co-ai-valknut-ver4-0020472/8c1edb4b-5a22-4300-090e-00189c1d90e5.jpg?w=540&h=756"
       },
       {
-        "id": 3,
+        "id": "'645447tre'",
         "name": "Simple Classic Jacket Y",
         "price": 485000,
-        "discount": 0.25,
+        "discount": 0.35,
         "image": "https://cdn2.yame.vn/pimg/ao-khoac-vai-logo-2010-min1-0020223/777ba9e0-36a4-1c00-74ce-00186b389175.jpg?w=540&h=756"
       },
       {
-        "id": 4,
+        "id": "'7567wfw'",
         "name": "Simple Classic Jacket",
         "price": 385000,
         "discount": 0.15,
         "image": "https://cdn2.yame.vn/pimg/ao-khoac-thun-on-gian-solid-m3-0020222/206348f8-1c31-0300-4ed7-001878816ef2.jpg?w=540&h=756"
       },
       {
-        "id": 5,
+        "id": "'ewgh'",
         "name": "Simple Classic Jacket",
         "price": 325000,
         "discount": 0.15,
         "image": "https://cdn2.yame.vn/pimg/ao-khoac-thun-co-non-y2010-e02-0019873/ce627aeb-057f-d600-8c4b-00178432376a.jpg?w=540&h=756"
       },
       {
-        "id": 6,
+        "id": "'trtert'",
         "name": "Original Y Hoodie Jacket",
         "price": 385000,
         "discount": 0.15,
@@ -90,42 +90,42 @@
     ],
     "Pants": [
       {
-        "id": 1,
+        "id": "'terth'",
         "name": "Simple Shorts 12VAHDT Van Xuan Kien Quoc",
         "price": 225000,
         "discount": 0.15,
         "image": "https://cdn2.yame.vn/pimg/quan-short-thun-van-xuan-kien-quoc-min2-0020103/12e1b3f4-ad77-2200-10a1-00181041fe83.jpg?w=540&h=756"
       },
       {
-        "id": 2,
+        "id": "'hhege'",
         "name": "Simple Slimfit Jeans Long Pants",
         "price": 385000,
         "discount": 0.15,
         "image": "https://cdn2.yame.vn/pimg/quan-jean-slimfit-tk-m2-0019883/f95a0a8b-fc11-1600-043e-001763e9711f.jpg?w=540&h=756"
       },
       {
-        "id": 3,
+        "id": "'rrejn'",
         "name": "Ancient God Shorts Aides",
         "price": 228000,
         "discount": 0.15,
         "image": "https://cdn2.yame.vn/pimg/quan-short-than-co-ai-aides-ver1-0020463/c0bc9a05-0de9-0100-eabb-00189c1ad647.jpg?w=540&h=756"
       },
       {
-        "id": 4,
+        "id": "'uytr'",
         "name": " Simple Shorts H01",
         "price": 185000,
         "discount": 0.15,
         "image": "https://cdn2.yame.vn/pimg/quan-short-thun-y2010-h01-0019817/a5bc4a49-0cf3-0300-285c-00180f6e7b80.jpg?w=540&h=756"
       },
       {
-        "id": 5,
+        "id": "'yrty'",
         "name": "Original Y Shorts 18- Summer",
         "price": 385000,
         "discount": 0.15,
         "image": "https://cdn2.yame.vn/pimg/quan-short-y-original-summer-ver3-0020250/ed06854e-33ee-9d00-ee99-001819ad82b5.jpg?w=540&h=756"
       },
       {
-        "id": 6,
+        "id": "'yrtyd'",
         "name": "Simple Loose Pants Pants Y Original",
         "price": 385000,
         "discount": 0.15,
@@ -134,42 +134,42 @@
     ],
     "Bags": [
       {
-        "id": 1,
+        "id": "'bnnht'",
         "name": "Original Y Simple Fit Backpack",
         "price": 249000,
         "discount": 0.15,
         "image": "https://cdn2.yame.vn/pimg/balo-fit-on-gian-y-nguyen-ban-ver3-0020362/ea167587-1e93-1900-f599-001878841f6e.jpg?w=540&h=756"
       },
       {
-        "id": 2,
+        "id": "'wewvs'",
         "name": "Special Fit Backpack",
         "price": 249000,
         "discount": 0.1,
         "image": "https://cdn2.yame.vn/pimg/balo-a-tk-m1-0019945/d79d6072-a50a-3800-8920-00181b262f8b.jpg?w=540&h=756"
       },
       {
-        "id": 3,
+        "id": "'fshs'",
         "name": "Khepri . Ancient God Big Backpack",
         "price": 319000,
         "discount": 0.1,
         "image": "https://cdn2.yame.vn/pimg/balo-big-than-co-ai-khepri-ver1-0020367/e83393c3-2b0a-2300-88c4-00189c1be511.jpg?w=540&h=756"
       },
       {
-        "id": 4,
+        "id": "'dfsghrs'",
         "name": "Backpack Fit 12VAHDT Van Hien Chi Bang",
         "price": 399000,
         "discount": 0.15,
         "image": "https://cdn2.yame.vn/pimg/balo-y2010-h61-0019280/bc8dd1c2-a95d-2600-cc8b-00188ec5984f.jpg?w=540&h=756"
       },
       {
-        "id": 5,
+        "id": "'gssesd'",
         "name": "Simple Big Backpack H66 BD-A69",
         "price": 385000,
         "discount": 0.15,
         "image": "https://cdn2.yame.vn/pimg/balo-y2010-h66-bd-a69-0019296/c42b472a-5fd5-0700-3152-0018197eebfd.jpg?w=540&h=756"
       },
       {
-        "id": 6,
+        "id": "'fsdfsf'",
         "name": "Special Big Backpack H52",
         "price": 385000,
         "discount": 0.15,
@@ -178,42 +178,42 @@
     ],
     "Accessories": [
       {
-        "id": 1,
+        "id": "'ffsdfwa'",
         "name": "PKTT Simple Belts",
         "price": 285000,
         "discount": 0.15,
         "image": "https://cdn2.yame.vn/pimg/pktt-day-nit-m13-0020183/d7b226f5-4bb8-0600-34b8-0017b4d991c6.jpg?w=540&h=756"
       },
       {
-        "id": 2,
+        "id": "'fff'",
         "name": "PKTT Simple Belts",
         "price": 285000,
         "discount": 0.15,
         "image": "https://cdn2.yame.vn/pimg/pktt-day-nit-m11-0020114/3add9315-1cb3-1d00-e71f-00187d6edabc.jpg?w=540&h=756"
       },
       {
-        "id": 3,
+        "id": "'ccc'",
         "name": "PKTT Ancient God Hat Anubis Ver3",
         "price": 143000,
         "discount": 0.15,
         "image": "https://cdn2.yame.vn/pimg/pktt-non-than-co-ai-anubis-ver3-0020478/73ee0016-bee0-7600-4468-00189c1e6882.jpg?w=540&h=756"
       },
       {
-        "id": 4,
+        "id": "'rrwe'",
         "name": "PKTT Galaxy Cone 4 Element Ver1",
         "price": 145000,
         "discount": 0.15,
         "image": "https://cdn2.yame.vn/pimg/pktt-non-y2010-a20-0019607/8da866be-e085-2d00-40ef-0016ea3a5c4b.jpg?w=540&h=756"
       },
       {
-        "id": 5,
+        "id": "'rerw'",
         "name": "Simple High Sole Sandal B13",
         "price": 160000,
         "discount": 0.15,
         "image": "https://cdn2.yame.vn/pimg/sandal-nam-y2010-b13-0019278/b82c83ad-bb77-0200-8c46-001760232cac.jpg?w=540&h=756"
       },
       {
-        "id": 6,
+        "id": "'rwerwer'",
         "name": "Special Big Backpack H52",
         "price": 500000,
         "discount": 0.15,
