@@ -7,10 +7,6 @@ let closePayment = get(".custom");
 btnShowPaymet.onclick = (e) => {
   showPaymet.classList.add("active");
 };
-// showPaymet.onclick = (e) => {
-//   e.stopPropagation();
-//   showPaymet.classList.remove("active");
-// };
 closePayment.onclick = (e) => {
   e.stopPropagation();
   showPaymet.classList.remove("active");
