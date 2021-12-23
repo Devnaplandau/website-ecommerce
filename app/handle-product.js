@@ -225,9 +225,25 @@ function addLike(data) {
     localStorage.setItem("likeProduct", convert);
   }
 
+  // if (callLocal != null) {
+  //   const itemCart = createObjLike(data);
+  //   convert.push(itemCart);
+  //   saveListLikeItem(convert);
+  // }
   if (callLocal != null) {
-    const itemCart = createObjLike(data);
-    convert.push(itemCart);
+    let existItemCart = false;
+    // xử lí nếu add trùng
+    for (let i = 0; i < convert.length; i++) {
+      let saveIndex = convert[i];
+      if (saveIndex.id == data) {
+        saveIndex.id == data;
+        existItemCart = true;
+      }
+    }
+    if (existItemCart == false) {
+      const itemCart = createObjLike(data);
+      convert.push(itemCart);
+    }
     saveListLikeItem(convert);
   }
 }
