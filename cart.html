@@ -114,36 +114,17 @@
 
     <section class="shopping-cart">
       <h1 class="heading">your <span>products</span></h1>
-      <div class="box-container">
-        <div class="box">
-          <i class="fas fa-times"></i>
-          <img src="images/meme.jpg" alt="" />
-          <div class="content">
-            <h3>smartphone</h3>
-            <form action="">
-              <span>quatity: </span>
-              <input type="number" name="" id="" value="1" />
-            </form>
-            <div class="price">$249.99 <span>#999</span></div>
+      <div class="box-container itemCart">
+        <div class="empty-product">
+          <img src="images/empty-removebg-preview.png" alt="" class="empty" />
+          <div class="title-empty">
+            <h3>You don't have any favorites yet?</h3>
           </div>
         </div>
-        <!--  -->
-        <!-- <div class="box">
-          <i class="fas fa-times"></i>
-          <img src="images/meme.jpg" alt="" />
-          <div class="content">
-            <h3>smartphone</h3>
-            <form action="">
-              <span>quatity: </span>
-              <input type="number" name="" id="" value="1" />
-            </form>
-            <div class="price">$249.99 <span>#999</span></div>
-          </div>
-        </div> -->
-        <!--  -->
       </div>
+
       <div class="cart-total">
-        <h3>subtotal : <span>$19999</span></h3>
+        <h3>subtotal : <span class="total"></span></h3>
         <a href="#" class="btn btn-payment">payment</a>
       </div>
     </section>
@@ -178,7 +159,9 @@
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <!-- js file -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script src="app/cart.js"></script>
+
     <script src="app/logic.js"></script>
+    <script src="app/countItem.js"></script>
+    <script src="app/cart.js"></script>
   </body>
 </html>

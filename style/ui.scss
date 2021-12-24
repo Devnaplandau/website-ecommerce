@@ -308,7 +308,7 @@ section {
         left: 3.4rem;
         position: absolute;
         z-index: 10;
-        background: #684d4d;
+        background: #f89fb1;
         border-radius: 50%;
         text-align: center;
       }
@@ -584,12 +584,12 @@ section {
             color: $light-color;
           }
           input {
-            width: 7rem;
+            width: 5rem;
             padding: 0.5rem 1rem;
             border-radius: 0.5rem;
             background: $light-bg;
             color: $light-color;
-            font-size: 1.5rem;
+            font-size: 1.7rem;
           }
         }
         .price {
@@ -630,13 +630,13 @@ section {
     .title-empty {
       color: #888;
       h3 {
-        font-size: 1.7rem;
+        font-size: 2rem;
         font-weight: bold;
         color: $light-color;
       }
     }
     img {
-      height: 12rem;
+      height: 20rem;
     }
   }
   .cart-total {
@@ -995,6 +995,29 @@ section {
           }
         }
       }
+    }
+  }
+  .empty-find {
+    display: none;
+    flex-direction: column-reverse;
+    padding: 2rem;
+    align-items: center;
+    &.active {
+      display: flex;
+    }
+    .empty-f {
+      order: 2;
+    }
+    .title-empty-f {
+      color: #888;
+      h3 {
+        font-size: 2rem;
+        font-weight: bold;
+        color: $light-color;
+      }
+    }
+    img {
+      height: 20rem;
     }
   }
 }

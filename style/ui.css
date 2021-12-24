@@ -373,7 +373,7 @@ section {
   left: 3.4rem;
   position: absolute;
   z-index: 10;
-  background: #684d4d;
+  background: #f89fb1;
   border-radius: 50%;
   text-align: center;
 }
@@ -696,12 +696,12 @@ section {
 }
 
 .shopping-cart .box-container .box .content form input {
-  width: 7rem;
+  width: 5rem;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   background: #eee;
   color: #666;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
 }
 
 .shopping-cart .box-container .box .content .price {
@@ -757,13 +757,13 @@ section {
 }
 
 .shopping-cart .empty-product .title-empty h3 {
-  font-size: 1.7rem;
+  font-size: 2rem;
   font-weight: bold;
   color: #666;
 }
 
 .shopping-cart .empty-product img {
-  height: 12rem;
+  height: 20rem;
 }
 
 .shopping-cart .cart-total {
@@ -1187,6 +1187,44 @@ section {
 .products .box-container .box .content .stars i {
   font-size: 1.7rem;
   color: gold;
+}
+
+.products .empty-find {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  padding: 2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.products .empty-find.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.products .empty-find .empty-f {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+.products .empty-find .title-empty-f {
+  color: #888;
+}
+
+.products .empty-find .title-empty-f h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #666;
+}
+
+.products .empty-find img {
+  height: 20rem;
 }
 
 .product-banner .box-container {

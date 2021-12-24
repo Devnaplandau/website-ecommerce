@@ -165,6 +165,14 @@ const pageProduct = {
     };
   },
   renderFilter: function (data) {
+    if (data.length == 0) {
+      let listProducts = get(".empty-find");
+      listProducts.classList.add("active");
+    } else {
+      let listProducts = get(".empty-find");
+      listProducts.classList.remove("active");
+    }
+
     let htmls = data.map((item) => {
       return `  <div class="box">
      <div class="image ">
@@ -269,6 +277,7 @@ function addCart(data) {
 
   let callLocal = localStorage.getItem("cartProduct");
   let convert = JSON.parse(callLocal);
+  // xử lí bth
   let listIds = [];
   if (callLocal == null) {
     let dataCart = createObjCart(data, 1);
@@ -293,6 +302,7 @@ function addCart(data) {
     }
     saveListCartItem(convert);
   }
+  location.reload();
 }
 
 function createObjCart(id, quantity) {
