@@ -638,7 +638,7 @@ section {
 }
 
 .shopping-cart .box-container .box {
-  max-width: 52rem;
+  max-width: 70rem;
   position: relative;
   padding: 2rem;
   border: 0.2rem solid rgba(0, 0, 0, 0.479);
@@ -1470,9 +1470,6 @@ section {
 }
 
 @media (max-width: 1200px) {
-  html {
-    font-size: 55%;
-  }
   .header {
     padding: 2rem;
   }

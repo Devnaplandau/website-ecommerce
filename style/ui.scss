@@ -541,7 +541,7 @@ section {
     @include grid(31rem);
 
     .box {
-      max-width: 52rem;
+      max-width: 70rem;
       position: relative;
       padding: 2rem;
       border: $border;
@@ -1214,9 +1214,10 @@ section {
 // Responsive
 
 @media (max-width: 1200px) {
-  html {
-    font-size: 55%;
-  }
+  // html {
+  //   font-size: 55%;
+  // }
+
   .header {
     padding: 2rem;
   }
