@@ -277,6 +277,7 @@ function addCart(data) {
 
   let callLocal = localStorage.getItem("cartProduct");
   let convert = JSON.parse(callLocal);
+
   // xử lí bth
   let listIds = [];
   if (callLocal == null) {
@@ -301,8 +302,8 @@ function addCart(data) {
       convert.push(itemCart);
     }
     saveListCartItem(convert);
+    loadCount();
   }
-  location.reload();
 }
 
 function createObjCart(id, quantity) {
@@ -349,4 +350,11 @@ function toast({ title = "", message = "", type = "info", duration = 3000 }) {
       `;
     main.appendChild(toast);
   }
+}
+
+function loadCount() {
+  let count = document.querySelector(".count");
+  let local = localStorage.getItem("cartProduct");
+  let convert = JSON.parse(local);
+  count.innerHTML = convert.length;
 }
