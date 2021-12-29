@@ -596,7 +596,9 @@ section {
           padding-bottom: 1rem;
           font-size: 2rem;
           color: #f19dac;
-
+          .price-down {
+            display: inline-block;
+          }
           span {
             font-size: 1.5rem;
             color: $light-color;

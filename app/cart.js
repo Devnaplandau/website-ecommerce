@@ -1,9 +1,11 @@
 const get = document.querySelector.bind(document);
 const getAll = document.querySelectorAll.bind(document);
 
+let box_cart = get(".itemCart");
 let showPaymet = get(".overlay-payment");
 let btnShowPaymet = get(".btn-payment");
 let closePayment = get(".custom");
+
 btnShowPaymet.onclick = (e) => {
   showPaymet.classList.add("active");
 };
@@ -46,7 +48,6 @@ const cartProduct = {
     return arrNull;
   },
   handleGetData: function () {
-    // let _this = this;
     fetch("dataProduct.json")
       .then((response) => {
         return response.json();
@@ -66,6 +67,7 @@ const cartProduct = {
 
       let change = this.productFunc(productsAll);
       this.checkQuantity(change);
+      this.del(change);
     });
   },
   checkQuantity: function (data) {
@@ -84,19 +86,55 @@ const cartProduct = {
       this.caculator(arrContain);
     }
   },
+  del: function (data) {
+    let that = this;
+    box_cart.addEventListener("click", del_cart);
+    function del_cart(e) {
+      cartItem = e.target.parentElement;
+      if (e.target.classList.contains("del-cart")) {
+        cartItem.remove();
+      }
+      let cloneData = localStorage.getItem("cartProduct");
+      let convert = JSON.parse(cloneData);
+      let update = convert.filter((product) => {
+        return `'${product.id}'` != cartItem.dataset.id;
+      });
+
+      localStorage.setItem("cartProduct", JSON.stringify(update));
+
+      that.count();
+      that.checkcal(data);
+    }
+  },
+  checkcal: function (data) {
+    let cloneData = localStorage.getItem("cartProduct");
+    let convert = JSON.parse(cloneData);
+    let arrContain = [];
+    for (let i = 0; i < convert.length; i++) {
+      let saveIndex = convert[i];
+      let checkCartLocal = data.filter((item) => {
+        if (item.id == `'${saveIndex.id}'`) {
+          return saveIndex.id;
+        }
+      });
+
+      arrContain.push(...checkCartLocal);
+      this.caculator(arrContain);
+    }
+  },
   caculator: function (data) {
     let total = get(".total");
-    let cacu = data.reduce((total, value) => {
+    let cacu = data?.reduce((total, value) => {
       return (total += value.quantity * value.markDown());
     }, 0);
-    total.innerHTML = cacu.toLocaleString() + " " + "VNĐ";
+    total.innerHTML = cacu?.toLocaleString() + " " + "VNĐ" ?? 0;
   },
   renderItem: function (data) {
     // xử lí render
     let nodeCard = get(".itemCart");
     let html = data.map((item) => {
-      return ` <div class="box ">
-      <i class="fas fa-times del-cart" onclick = "del()"></i>
+      return ` <div class="box" data-id="${item.id}">
+      <i class="fas fa-times del-cart"></i>
       <img src="${item.image}" alt=""/>
       <div class="content">
         <h3>${item.name}</h3>
@@ -104,17 +142,23 @@ const cartProduct = {
         <span>quatity: </span>
         <input type="number" name="" id="" value="${item.quantity}" disabled />
       </form>
-        <div class="price item-12qwe">${item
-          .markDown()
-          .toLocaleString()}VNĐ  <span>${item.price.toLocaleString()}.VNĐ</span></div>
+        <div class="price item-12qwe">
+        <p class="price-down">
+        ${item.markDown().toLocaleString()} VNĐ 
+          </p>
+        <span>${item.price.toLocaleString()}.VNĐ</span></div>
       </div>
     </div>`;
     });
     nodeCard.innerHTML = html.join("");
   },
-  del: function () {
-    localStorage.removeItem("cartProduct");
+  count: function () {
+    let count = document.querySelector(".count");
+    let cloneData = localStorage.getItem("cartProduct");
+    let convert = JSON.parse(cloneData);
+    if (convert) count.textContent = convert.length;
   },
+
   runAll: function () {
     this.handleGetData();
   },
@@ -122,7 +166,3 @@ const cartProduct = {
 
 cartProduct.runAll();
 // xử lí linh tinh
-function del() {
-  cartProduct.del();
-  location.reload();
-}
